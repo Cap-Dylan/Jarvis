@@ -1,0 +1,2276 @@
+{
+  "llama3.2:3b": [
+    {
+      "test": "morning_sunny",
+      "run": 1,
+      "latency_ms": 5633.9,
+      "json_valid": true,
+      "issues": [],
+      "value": 4000,
+      "raw": "{\"color_temp_kelvin\": 4000, \"reason\": \"It's 7am on a sunny day.\"}"
+    },
+    {
+      "test": "morning_sunny",
+      "run": 2,
+      "latency_ms": 691.3,
+      "json_valid": true,
+      "issues": [],
+      "value": 4000,
+      "raw": "{\"color_temp_kelvin\": 4000, \"reason\": \"It is currently daytime and sunny outside.\"}"
+    },
+    {
+      "test": "morning_sunny",
+      "run": 3,
+      "latency_ms": 856.4,
+      "json_valid": true,
+      "issues": [],
+      "value": 4500,
+      "raw": "{\"color_temp_kelvin\": 4500, \"reason\": \"time of day takes priority, and it's morning during a sunny day.\"}"
+    },
+    {
+      "test": "morning_sunny",
+      "run": 4,
+      "latency_ms": 783.0,
+      "json_valid": true,
+      "issues": [],
+      "value": 4000,
+      "raw": "{\"color_temp_kelvin\": 4000, \"reason\": \"It is currently 7 o'clock and sunny outside, so the desired color temperature is set to cool white.\"}"
+    },
+    {
+      "test": "morning_sunny",
+      "run": 5,
+      "latency_ms": 668.3,
+      "json_valid": true,
+      "issues": [],
+      "value": 4000,
+      "raw": "{\"color_temp_kelvin\": 4000, \"reason\": \"It is daytime and the current hour is 7am.\"}"
+    },
+    {
+      "test": "morning_sunny",
+      "run": 6,
+      "latency_ms": 654.8,
+      "json_valid": true,
+      "issues": [],
+      "value": 4000,
+      "raw": "{\"color_temp_kelvin\": 4000, \"reason\": \"It is currently 7 o'clock in the morning.\"}"
+    },
+    {
+      "test": "morning_sunny",
+      "run": 7,
+      "latency_ms": 550.8,
+      "json_valid": true,
+      "issues": [],
+      "value": 4500,
+      "raw": "{\"color_temp_kelvin\": 4500, \"reason\": \"It is still early morning and sunny outside.\"}"
+    },
+    {
+      "test": "morning_sunny",
+      "run": 8,
+      "latency_ms": 683.4,
+      "json_valid": true,
+      "issues": [],
+      "value": 4000,
+      "raw": "{\"color_temp_kelvin\": 4000, \"reason\": \"It's morning and the time of day takes priority over the weather.\"}"
+    },
+    {
+      "test": "morning_sunny",
+      "run": 9,
+      "latency_ms": 716.5,
+      "json_valid": true,
+      "issues": [],
+      "value": 5000,
+      "raw": "{\"color_temp_kelvin\": 5000, \"reason\": \"It is currently 7am and the weather is sunny.\"}"
+    },
+    {
+      "test": "morning_sunny",
+      "run": 10,
+      "latency_ms": 819.8,
+      "json_valid": true,
+      "issues": [],
+      "value": 5000,
+      "raw": "{\"color_temp_kelvin\": 5000, \"reason\": \"It is 7 o'clock in the morning, and the weather is sunny.\"}"
+    },
+    {
+      "test": "midday_cloudy",
+      "run": 1,
+      "latency_ms": 820.2,
+      "json_valid": true,
+      "issues": [],
+      "value": 2700,
+      "raw": "{\"color_temp_kelvin\": 2700, \"reason\": \"overcast weather indicates the need for warm white light despite being early morning.\"}"
+    },
+    {
+      "test": "midday_cloudy",
+      "run": 2,
+      "latency_ms": 612.6,
+      "json_valid": true,
+      "issues": [],
+      "value": 3200,
+      "raw": "{\"color_temp_kelvin\": 3200, \"reason\": \"overcast and cloudy weather suggests warm white light\"}"
+    },
+    {
+      "test": "midday_cloudy",
+      "run": 3,
+      "latency_ms": 614.0,
+      "json_valid": true,
+      "issues": [
+        "wrong_value(2500_expected_2700-4000)"
+      ],
+      "value": 2500,
+      "raw": "{\"color_temp_kelvin\": 2500, \"reason\": \"evening\" }"
+    },
+    {
+      "test": "midday_cloudy",
+      "run": 4,
+      "latency_ms": 716.0,
+      "json_valid": true,
+      "issues": [],
+      "value": 3200,
+      "raw": "{\"color_temp_kelvin\": 3200, \"reason\": \"it's cloudy outside, following the warm white temperature range for overcast conditions\"}"
+    },
+    {
+      "test": "midday_cloudy",
+      "run": 5,
+      "latency_ms": 652.7,
+      "json_valid": true,
+      "issues": [],
+      "value": 3000,
+      "raw": "{\"color_temp_kelvin\": 3000, \"reason\": \"Evening period has taken priority over the cloudy weather\"}"
+    },
+    {
+      "test": "midday_cloudy",
+      "run": 6,
+      "latency_ms": 678.9,
+      "json_valid": true,
+      "issues": [],
+      "value": 3200,
+      "raw": "{\"color_temp_kelvin\": 3200, \"reason\": \"It is cloudy outside but it is daytime.\"}"
+    },
+    {
+      "test": "midday_cloudy",
+      "run": 7,
+      "latency_ms": 824.0,
+      "json_valid": true,
+      "issues": [],
+      "value": 3000,
+      "raw": "{\"color_temp_kelvin\": 3000, \"reason\": \"evening time period, despite cloudy weather\"}"
+    },
+    {
+      "test": "midday_cloudy",
+      "run": 8,
+      "latency_ms": 675.9,
+      "json_valid": true,
+      "issues": [
+        "wrong_value(2500_expected_2700-4000)"
+      ],
+      "value": 2500,
+      "raw": "{\"color_temp_kelvin\": 2500, \"reason\": \"Evening time is the current hour (10:00), even though it's cloudy outside.\"}"
+    },
+    {
+      "test": "midday_cloudy",
+      "run": 9,
+      "latency_ms": 668.0,
+      "json_valid": true,
+      "issues": [],
+      "value": 3200,
+      "raw": "{\"color_temp_kelvin\": 3200, \"reason\": \"It's cloudy outside, so we're using the overcast/rainy range.\"}"
+    },
+    {
+      "test": "midday_cloudy",
+      "run": 10,
+      "latency_ms": 564.2,
+      "json_valid": true,
+      "issues": [
+        "wrong_value(2500_expected_2700-4000)"
+      ],
+      "value": 2500,
+      "raw": "{\"color_temp_kelvin\": 2500, \"reason\": \"Evening time period, regardless of current weather.\"}"
+    },
+    {
+      "test": "afternoon_rainy",
+      "run": 1,
+      "latency_ms": 609.5,
+      "json_valid": true,
+      "issues": [],
+      "value": 2700,
+      "raw": "{\"color_temp_kelvin\": 2700, \"reason\": \"it is rainy outside\"}"
+    },
+    {
+      "test": "afternoon_rainy",
+      "run": 2,
+      "latency_ms": 547.4,
+      "json_valid": true,
+      "issues": [],
+      "value": 2700,
+      "raw": "{\"color_temp_kelvin\": 2700, \"reason\": \"It is overcast and raining outside.\"}"
+    },
+    {
+      "test": "afternoon_rainy",
+      "run": 3,
+      "latency_ms": 664.4,
+      "json_valid": true,
+      "issues": [],
+      "value": 3200,
+      "raw": "{\"color_temp_kelvin\": 3200, \"reason\": \"the time of day takes precedence over the weather, so it's 14:00, which is daytime.\"}"
+    },
+    {
+      "test": "afternoon_rainy",
+      "run": 4,
+      "latency_ms": 642.4,
+      "json_valid": true,
+      "issues": [],
+      "value": 3000,
+      "raw": "{\"color_temp_kelvin\": 3000, \"reason\": \"It is daytime at 14:00.\"}"
+    },
+    {
+      "test": "afternoon_rainy",
+      "run": 5,
+      "latency_ms": 570.7,
+      "json_valid": true,
+      "issues": [],
+      "value": 2700,
+      "raw": "{\"color_temp_kelvin\": 2700, \"reason\": \"It is currently overcast and raining outside.\"}"
+    },
+    {
+      "test": "afternoon_rainy",
+      "run": 6,
+      "latency_ms": 680.5,
+      "json_valid": true,
+      "issues": [],
+      "value": 3000,
+      "raw": "{\"color_temp_kelvin\": 3000, \"reason\": \"Evening period has started, transitioning from the overcast/rainy weather.\"}"
+    },
+    {
+      "test": "afternoon_rainy",
+      "run": 7,
+      "latency_ms": 590.4,
+      "json_valid": true,
+      "issues": [],
+      "value": 2800,
+      "raw": "{\"color_temp_kelvin\": 2800, \"reason\": \"It is currently 2 PM on a rainy day.\"}"
+    },
+    {
+      "test": "afternoon_rainy",
+      "run": 8,
+      "latency_ms": 598.2,
+      "json_valid": true,
+      "issues": [
+        "wrong_value(2500_expected_2700-3500)"
+      ],
+      "value": 2500,
+      "raw": "{\"color_temp_kelvin\": 2500, \"reason\": \" Evening condition applies despite rainy weather due to time of day being afternoon.\"}"
+    },
+    {
+      "test": "afternoon_rainy",
+      "run": 9,
+      "latency_ms": 631.8,
+      "json_valid": true,
+      "issues": [],
+      "value": 3200,
+      "raw": "{\"color_temp_kelvin\": 3200, \"reason\": \"Overcast and rainy conditions warrant a warm white color temperature of 3200 Kelvin.\"}"
+    },
+    {
+      "test": "afternoon_rainy",
+      "run": 10,
+      "latency_ms": 730.4,
+      "json_valid": true,
+      "issues": [],
+      "value": 2700,
+      "raw": "{\"color_temp_kelvin\": 2700, \"reason\": \"It's overcast and rainy outside, so the light should be set to warm white for a cozy atmosphere.\"}"
+    },
+    {
+      "test": "noon_fog",
+      "run": 1,
+      "latency_ms": 755.3,
+      "json_valid": true,
+      "issues": [],
+      "value": 3000,
+      "raw": "{\"color_temp_kelvin\": 3000, \"reason\": \"Evening time, regardless of the foggy weather, dictates a warm color temperature.\"}"
+    },
+    {
+      "test": "noon_fog",
+      "run": 2,
+      "latency_ms": 583.3,
+      "json_valid": true,
+      "issues": [],
+      "value": 3000,
+      "raw": "{\"color_temp_kelvin\": 3000, \"reason\": \"it's daytime\"}"
+    },
+    {
+      "test": "noon_fog",
+      "run": 3,
+      "latency_ms": 721.9,
+      "json_valid": true,
+      "issues": [
+        "wrong_value(2500_expected_2700-4000)"
+      ],
+      "value": 2500,
+      "raw": "{\"color_temp_kelvin\": 2500, \"reason\": \"It's evening, regardless of the fog outside.\"}"
+    },
+    {
+      "test": "noon_fog",
+      "run": 4,
+      "latency_ms": 812.9,
+      "json_valid": true,
+      "issues": [
+        "wrong_value(2500_expected_2700-4000)"
+      ],
+      "value": 2500,
+      "raw": "{\"color_temp_kelvin\": 2500, \"reason\": \"Evening time of day has taken priority over the foggy weather condition.\"}"
+    },
+    {
+      "test": "noon_fog",
+      "run": 5,
+      "latency_ms": 717.8,
+      "json_valid": true,
+      "issues": [],
+      "value": 2700,
+      "raw": "{\"color_temp_kelvin\": 2700, \"reason\": \"overcast conditions from foggy weather require warm white light\"}"
+    },
+    {
+      "test": "noon_fog",
+      "run": 6,
+      "latency_ms": 705.5,
+      "json_valid": true,
+      "issues": [],
+      "value": 3000,
+      "raw": "{\"color_temp_kelvin\": 3000, \"reason\": \"It's daytime, so the light should have a cool white color temperature.\"}"
+    },
+    {
+      "test": "noon_fog",
+      "run": 7,
+      "latency_ms": 626.1,
+      "json_valid": true,
+      "issues": [],
+      "value": 3000,
+      "raw": "{\"color_temp_kelvin\": 3000, \"reason\": \"It is daytime and the fog doesn't significantly alter this.\"}"
+    },
+    {
+      "test": "noon_fog",
+      "run": 8,
+      "latency_ms": 715.8,
+      "json_valid": true,
+      "issues": [],
+      "value": 3000,
+      "raw": "{\"color_temp_kelvin\": 3000, \"reason\": \"Evening transition period due to the hour being 12 PM.\"}"
+    },
+    {
+      "test": "noon_fog",
+      "run": 9,
+      "latency_ms": 658.9,
+      "json_valid": true,
+      "issues": [
+        "wrong_value(2500_expected_2700-4000)"
+      ],
+      "value": 2500,
+      "raw": "{\"color_temp_kelvin\": 2500, \"reason\": \"Evening hour overrides the foggy weather to set a warm temperature.\"}"
+    },
+    {
+      "test": "noon_fog",
+      "run": 10,
+      "latency_ms": 670.1,
+      "json_valid": true,
+      "issues": [],
+      "value": 3000,
+      "raw": "{\"color_temp_kelvin\": 3000, \"reason\": \"evening warmth suits the cloudy day of fog\"}"
+    },
+    {
+      "test": "noon_sunny",
+      "run": 1,
+      "latency_ms": 648.0,
+      "json_valid": true,
+      "issues": [],
+      "value": 4000,
+      "raw": "{\"color_temp_kelvin\": 4000, \"reason\": \"It is currently daytime at noon on a sunny day.\"}"
+    },
+    {
+      "test": "noon_sunny",
+      "run": 2,
+      "latency_ms": 536.1,
+      "json_valid": true,
+      "issues": [],
+      "value": 4000,
+      "raw": "{\"color_temp_kelvin\": 4000, \"reason\": \"It is daytime and sunny outside.\"}"
+    },
+    {
+      "test": "noon_sunny",
+      "run": 3,
+      "latency_ms": 620.7,
+      "json_valid": true,
+      "issues": [],
+      "value": 5000,
+      "raw": "{\"color_temp_kelvin\": 5000, \"reason\": \"it is currently 12 noon and the weather is sunny.\"}"
+    },
+    {
+      "test": "noon_sunny",
+      "run": 4,
+      "latency_ms": 627.5,
+      "json_valid": true,
+      "issues": [],
+      "value": 4000,
+      "raw": "{\"color_temp_kelvin\": 4000, \"reason\": \"It is currently daytime (12:00 PM) and sunny outside.\"}"
+    },
+    {
+      "test": "noon_sunny",
+      "run": 5,
+      "latency_ms": 638.3,
+      "json_valid": true,
+      "issues": [],
+      "value": 4500,
+      "raw": "{\"color_temp_kelvin\": 4500, \"reason\": \"It is currently noon on a sunny day.\"}"
+    },
+    {
+      "test": "noon_sunny",
+      "run": 6,
+      "latency_ms": 716.9,
+      "json_valid": true,
+      "issues": [],
+      "value": 5000,
+      "raw": "{\"color_temp_kelvin\": 5000, \"reason\": \"It is noon and the weather is sunny.\"}"
+    },
+    {
+      "test": "noon_sunny",
+      "run": 7,
+      "latency_ms": 613.9,
+      "json_valid": true,
+      "issues": [],
+      "value": 4000,
+      "raw": "{\"color_temp_kelvin\": 4000, \"reason\": \"It is currently noon in the daytime.\"}"
+    },
+    {
+      "test": "noon_sunny",
+      "run": 8,
+      "latency_ms": 818.0,
+      "json_valid": true,
+      "issues": [],
+      "value": 4500,
+      "raw": "{\"color_temp_kelvin\": 4500, \"reason\": \"12 PM on a sunny day requires cool white light to enhance visibility and ambiance.\"}"
+    },
+    {
+      "test": "noon_sunny",
+      "run": 9,
+      "latency_ms": 721.6,
+      "json_valid": true,
+      "issues": [],
+      "value": 4000,
+      "raw": "{\"color_temp_kelvin\": 4000, \"reason\": \"It's noon on a sunny day.\"}"
+    },
+    {
+      "test": "noon_sunny",
+      "run": 10,
+      "latency_ms": 515.1,
+      "json_valid": true,
+      "issues": [],
+      "value": 4000,
+      "raw": "{\"color_temp_kelvin\": 4000, \"reason\": \"It's daytime and sunny outside.\"}"
+    },
+    {
+      "test": "sunrise_boundary",
+      "run": 1,
+      "latency_ms": 740.1,
+      "json_valid": true,
+      "issues": [],
+      "value": 4000,
+      "raw": "{\"color_temp_kelvin\": 4000, \"reason\": \"it is daytime (6:00 AM) and the weather is sunny.\"}"
+    },
+    {
+      "test": "sunrise_boundary",
+      "run": 2,
+      "latency_ms": 685.9,
+      "json_valid": true,
+      "issues": [],
+      "value": 5000,
+      "raw": "{\"color_temp_kelvin\": 5000, \"reason\": \"It is currently daytime and sunny outside.\"}"
+    },
+    {
+      "test": "sunrise_boundary",
+      "run": 3,
+      "latency_ms": 605.4,
+      "json_valid": true,
+      "issues": [],
+      "value": 4000,
+      "raw": "{\"color_temp_kelvin\": 4000, \"reason\": \"It is currently daytime.\"}"
+    },
+    {
+      "test": "sunrise_boundary",
+      "run": 4,
+      "latency_ms": 742.9,
+      "json_valid": true,
+      "issues": [],
+      "value": 4000,
+      "raw": "{\"color_temp_kelvin\": 4000, \"reason\": \"It's currently 6 AM, and the weather is sunny.\"}"
+    },
+    {
+      "test": "sunrise_boundary",
+      "run": 5,
+      "latency_ms": 579.8,
+      "json_valid": true,
+      "issues": [],
+      "value": 4000,
+      "raw": "{\"color_temp_kelvin\": 4000, \"reason\": \"It is currently daytime and sunny outside.\"}"
+    },
+    {
+      "test": "sunrise_boundary",
+      "run": 6,
+      "latency_ms": 653.0,
+      "json_valid": true,
+      "issues": [],
+      "value": 4000,
+      "raw": "{\"color_temp_kelvin\": 4000, \"reason\": \"It's 6 in the morning on a sunny day.\"}"
+    },
+    {
+      "test": "sunrise_boundary",
+      "run": 7,
+      "latency_ms": 898.8,
+      "json_valid": true,
+      "issues": [],
+      "value": 4500,
+      "raw": "{\"color_temp_kelvin\": 4500, \"reason\": \"Time of day (6 in the morning) takes priority over weather (sunny), so a cool white color temperature is chosen.\"}"
+    },
+    {
+      "test": "sunrise_boundary",
+      "run": 8,
+      "latency_ms": 618.1,
+      "json_valid": true,
+      "issues": [],
+      "value": 4000,
+      "raw": "{\"color_temp_kelvin\": 4000, \"reason\": \"It is currently daytime and sunny.\"}"
+    },
+    {
+      "test": "sunrise_boundary",
+      "run": 9,
+      "latency_ms": 459.5,
+      "json_valid": true,
+      "issues": [],
+      "value": 4000,
+      "raw": "{\"color_temp_kelvin\": 4000, \"reason\": \"It's daytime and sunny outside.\"}"
+    },
+    {
+      "test": "sunrise_boundary",
+      "run": 10,
+      "latency_ms": 560.8,
+      "json_valid": true,
+      "issues": [],
+      "value": 4500,
+      "raw": "{\"color_temp_kelvin\": 4500, \"reason\": \"It's early morning and sunny outside\"}"
+    },
+    {
+      "test": "evening_clear",
+      "run": 1,
+      "latency_ms": 804.2,
+      "json_valid": true,
+      "issues": [
+        "wrong_value(4000_expected_2200-3500)"
+      ],
+      "value": 4000,
+      "raw": "{\"color_temp_kelvin\": 4000, \"reason\": \"Since the current hour is 19, it falls under evening, taking priority over the clear weather.\"}"
+    },
+    {
+      "test": "evening_clear",
+      "run": 2,
+      "latency_ms": 627.5,
+      "json_valid": true,
+      "issues": [
+        "wrong_value(4000_expected_2200-3500)"
+      ],
+      "value": 4000,
+      "raw": "{\"color_temp_kelvin\": 4000, \"reason\": \"It's still daytime despite the clear sky.\"}"
+    },
+    {
+      "test": "evening_clear",
+      "run": 3,
+      "latency_ms": 820.1,
+      "json_valid": true,
+      "issues": [
+        "wrong_value(4000_expected_2200-3500)"
+      ],
+      "value": 4000,
+      "raw": "{\"color_temp_kelvin\": 4000, \"reason\": \"It is daytime (19:00), so the light should have a cool white color temperature.\"}"
+    },
+    {
+      "test": "evening_clear",
+      "run": 4,
+      "latency_ms": 618.5,
+      "json_valid": true,
+      "issues": [
+        "wrong_value(4000_expected_2200-3500)"
+      ],
+      "value": 4000,
+      "raw": "{\"color_temp_kelvin\": 4000, \"reason\": \"19:00 on a clear evening\"}"
+    },
+    {
+      "test": "evening_clear",
+      "run": 5,
+      "latency_ms": 608.2,
+      "json_valid": true,
+      "issues": [
+        "wrong_value(4000_expected_2200-3500)"
+      ],
+      "value": 4000,
+      "raw": "{\"color_temp_kelvin\": 4000, \"reason\": \"It's still daytime despite the clear weather.\"}"
+    },
+    {
+      "test": "evening_clear",
+      "run": 6,
+      "latency_ms": 614.3,
+      "json_valid": true,
+      "issues": [
+        "wrong_value(5000_expected_2200-3500)"
+      ],
+      "value": 5000,
+      "raw": "{\"color_temp_kelvin\": 5000, \"reason\": \"it is still daytime (19:00 hours)\"}"
+    },
+    {
+      "test": "evening_clear",
+      "run": 7,
+      "latency_ms": 626.4,
+      "json_valid": true,
+      "issues": [
+        "wrong_value(4000_expected_2200-3500)"
+      ],
+      "value": 4000,
+      "raw": "{\"color_temp_kelvin\": 4000, \"reason\": \"It's clear outside and the time of day is evening.\"}"
+    },
+    {
+      "test": "evening_clear",
+      "run": 8,
+      "latency_ms": 601.8,
+      "json_valid": true,
+      "issues": [
+        "wrong_value(4000_expected_2200-3500)"
+      ],
+      "value": 4000,
+      "raw": "{\"color_temp_kelvin\": 4000, \"reason\": \"It is currently daytime.\"}"
+    },
+    {
+      "test": "evening_clear",
+      "run": 9,
+      "latency_ms": 819.1,
+      "json_valid": true,
+      "issues": [
+        "wrong_value(4000_expected_2200-3500)"
+      ],
+      "value": 4000,
+      "raw": "{\"color_temp_kelvin\": 4000, \"reason\": \"It is clear outside and the current hour (19) indicates late afternoon/early evening.\"}"
+    },
+    {
+      "test": "evening_clear",
+      "run": 10,
+      "latency_ms": 609.1,
+      "json_valid": true,
+      "issues": [
+        "wrong_value(4000_expected_2200-3500)"
+      ],
+      "value": 4000,
+      "raw": "{\"color_temp_kelvin\": 4000, \"reason\": \"It's a clear evening, prioritizing time of day over weather conditions.\"}"
+    },
+    {
+      "test": "evening_snow",
+      "run": 1,
+      "latency_ms": 719.9,
+      "json_valid": true,
+      "issues": [],
+      "value": 2500,
+      "raw": "{\"color_temp_kelvin\": 2500, \"reason\": \"Evening, as the hour of 20 corresponds to the evening time frame.\"}"
+    },
+    {
+      "test": "evening_snow",
+      "run": 2,
+      "latency_ms": 606.6,
+      "json_valid": true,
+      "issues": [],
+      "value": 2200,
+      "raw": "{\"color_temp_kelvin\": 2200, \"reason\": \"It is nighttime and the snowfall provides minimal light outside.\"}"
+    },
+    {
+      "test": "evening_snow",
+      "run": 3,
+      "latency_ms": 576.8,
+      "json_valid": true,
+      "issues": [],
+      "value": 2500,
+      "raw": "{\"color_temp_kelvin\": 2500, \"reason\": \"evening in snowy conditions requires a warm color temperature\"}"
+    },
+    {
+      "test": "evening_snow",
+      "run": 4,
+      "latency_ms": 659.9,
+      "json_valid": true,
+      "issues": [],
+      "value": 2500,
+      "raw": "{\"color_temp_kelvin\": 2500, \"reason\": \"It is evening, regardless of the snowy weather outside.\"}"
+    },
+    {
+      "test": "evening_snow",
+      "run": 5,
+      "latency_ms": 718.4,
+      "json_valid": true,
+      "issues": [],
+      "value": 2500,
+      "raw": "{\"color_temp_kelvin\": 2500, \"reason\": \"Evening time period has taken precedence over the snowy weather.\"}"
+    },
+    {
+      "test": "evening_snow",
+      "run": 6,
+      "latency_ms": 613.7,
+      "json_valid": true,
+      "issues": [],
+      "value": 2700,
+      "raw": "{\"color_temp_kelvin\": 2700, \"reason\": \"Overcast conditions require a warm white color temperature.\"}"
+    },
+    {
+      "test": "evening_snow",
+      "run": 7,
+      "latency_ms": 603.2,
+      "json_valid": true,
+      "issues": [],
+      "value": 3000,
+      "raw": "{\"color_temp_kelvin\": 3000, \"reason\": \"It is evening\"}"
+    },
+    {
+      "test": "evening_snow",
+      "run": 8,
+      "latency_ms": 726.7,
+      "json_valid": true,
+      "issues": [],
+      "value": 2500,
+      "raw": "{\"color_temp_kelvin\": 2500, \"reason\": \"it is evening and time of day takes priority over weather\"}"
+    },
+    {
+      "test": "evening_snow",
+      "run": 9,
+      "latency_ms": 818.3,
+      "json_valid": false,
+      "issues": [
+        "json_parse_failed"
+      ],
+      "value": null,
+      "raw": "{\"color_temp_kelvin\": 2000-2700, \"reason\": \"Evening (2500-3000 Kelvin) due to current hour being past 20:00, despite snowy weather.\"}"
+    },
+    {
+      "test": "evening_snow",
+      "run": 10,
+      "latency_ms": 613.2,
+      "json_valid": true,
+      "issues": [],
+      "value": 2200,
+      "raw": "{\"color_temp_kelvin\": 2200, \"reason\": \"It is nighttime.\"}"
+    },
+    {
+      "test": "evening_boundary",
+      "run": 1,
+      "latency_ms": 717.0,
+      "json_valid": true,
+      "issues": [
+        "wrong_value(4000_expected_2500-3500)"
+      ],
+      "value": 4000,
+      "raw": "{\"color_temp_kelvin\": 4000, \"reason\": \"17:00 hour in clear conditions\"}"
+    },
+    {
+      "test": "evening_boundary",
+      "run": 2,
+      "latency_ms": 820.7,
+      "json_valid": true,
+      "issues": [
+        "wrong_value(4500_expected_2500-3500)"
+      ],
+      "value": 4500,
+      "raw": "{\"color_temp_kelvin\": 4500, \"reason\": \"Since it's daytime and clear outside, the light's color temperature is set to a cool white (4000-5000 Kelvin)\" }"
+    },
+    {
+      "test": "evening_boundary",
+      "run": 3,
+      "latency_ms": 717.0,
+      "json_valid": true,
+      "issues": [
+        "wrong_value(4000_expected_2500-3500)"
+      ],
+      "value": 4000,
+      "raw": "{\"color_temp_kelvin\": 4000, \"reason\": \"It is daytime and clear outside.\"}"
+    },
+    {
+      "test": "evening_boundary",
+      "run": 4,
+      "latency_ms": 713.8,
+      "json_valid": true,
+      "issues": [
+        "wrong_value(4000_expected_2500-3500)"
+      ],
+      "value": 4000,
+      "raw": "{\"color_temp_kelvin\": 4000, \"reason\": \"17:00 hours, indicating evening time of day\"}"
+    },
+    {
+      "test": "evening_boundary",
+      "run": 5,
+      "latency_ms": 615.3,
+      "json_valid": true,
+      "issues": [
+        "wrong_value(4000_expected_2500-3500)"
+      ],
+      "value": 4000,
+      "raw": "{\"color_temp_kelvin\": 4000, \"reason\": \"It's daytime and the weather is clear.\"}"
+    },
+    {
+      "test": "evening_boundary",
+      "run": 6,
+      "latency_ms": 510.6,
+      "json_valid": true,
+      "issues": [
+        "wrong_value(4000_expected_2500-3500)"
+      ],
+      "value": 4000,
+      "raw": "{\"color_temp_kelvin\": 4000, \"reason\": \"It is daytime.\"}"
+    },
+    {
+      "test": "evening_boundary",
+      "run": 7,
+      "latency_ms": 700.4,
+      "json_valid": true,
+      "issues": [
+        "wrong_value(5000_expected_2500-3500)"
+      ],
+      "value": 5000,
+      "raw": "{\"color_temp_kelvin\": 5000, \"reason\": \"It is daytime (17:00), so a cool white color temperature of 5000 Kelvin is suitable.\"}"
+    },
+    {
+      "test": "evening_boundary",
+      "run": 8,
+      "latency_ms": 559.1,
+      "json_valid": true,
+      "issues": [
+        "wrong_value(4000_expected_2500-3500)"
+      ],
+      "value": 4000,
+      "raw": "{\"color_temp_kelvin\": 4000, \"reason\": \"It is daytime and the weather is clear.\"}"
+    },
+    {
+      "test": "evening_boundary",
+      "run": 9,
+      "latency_ms": 621.3,
+      "json_valid": true,
+      "issues": [
+        "wrong_value(4000_expected_2500-3500)"
+      ],
+      "value": 4000,
+      "raw": "{\"color_temp_kelvin\": 4000, \"reason\": \"time is 5 pm on a clear day\"}"
+    },
+    {
+      "test": "evening_boundary",
+      "run": 10,
+      "latency_ms": 679.4,
+      "json_valid": true,
+      "issues": [
+        "wrong_value(4000_expected_2500-3500)"
+      ],
+      "value": 4000,
+      "raw": "{\"color_temp_kelvin\": 4000, \"reason\": \"It is daytime and the weather does not affect the choice of color temperature when it is day.\"}"
+    },
+    {
+      "test": "night_clear",
+      "run": 1,
+      "latency_ms": 630.0,
+      "json_valid": true,
+      "issues": [],
+      "value": 2200,
+      "raw": "{\"color_temp_kelvin\": 2200, \"reason\": \"It is currently nighttime and the weather is clear.\"}"
+    },
+    {
+      "test": "night_clear",
+      "run": 2,
+      "latency_ms": 495.5,
+      "json_valid": true,
+      "issues": [],
+      "value": 2200,
+      "raw": "{\"color_temp_kelvin\": 2200, \"reason\": \"It is currently nighttime.\"}"
+    },
+    {
+      "test": "night_clear",
+      "run": 3,
+      "latency_ms": 576.8,
+      "json_valid": true,
+      "issues": [],
+      "value": 2200,
+      "raw": "{\"color_temp_kelvin\": 2200, \"reason\": \"it is currently night and clear outside\"}"
+    },
+    {
+      "test": "night_clear",
+      "run": 4,
+      "latency_ms": 548.6,
+      "json_valid": true,
+      "issues": [],
+      "value": 2200,
+      "raw": "{\"color_temp_kelvin\": 2200, \"reason\": \"clear night\"}"
+    },
+    {
+      "test": "night_clear",
+      "run": 5,
+      "latency_ms": 614.0,
+      "json_valid": true,
+      "issues": [],
+      "value": 2200,
+      "raw": "{\"color_temp_kelvin\": 2200, \"reason\": \"It is clear-night outside.\"}"
+    },
+    {
+      "test": "night_clear",
+      "run": 6,
+      "latency_ms": 463.7,
+      "json_valid": true,
+      "issues": [],
+      "value": 2200,
+      "raw": "{\"color_temp_kelvin\": 2200, \"reason\": \"It is currently nighttime.\"}"
+    },
+    {
+      "test": "night_clear",
+      "run": 7,
+      "latency_ms": 560.6,
+      "json_valid": true,
+      "issues": [],
+      "value": 2200,
+      "raw": "{\"color_temp_kelvin\": 2200, \"reason\": \"It is currently nighttime.\"}"
+    },
+    {
+      "test": "night_clear",
+      "run": 8,
+      "latency_ms": 687.1,
+      "json_valid": true,
+      "issues": [],
+      "value": 2200,
+      "raw": "{\"color_temp_kelvin\": 2200, \"reason\": \"It is currently 23:00, which falls within the night/clear-night color temperature range.\"}"
+    },
+    {
+      "test": "night_clear",
+      "run": 9,
+      "latency_ms": 745.1,
+      "json_valid": true,
+      "issues": [],
+      "value": 2200,
+      "raw": "{\"color_temp_kelvin\": 2200, \"reason\": \"It is clear outside and the current hour is 23.\"}"
+    },
+    {
+      "test": "night_clear",
+      "run": 10,
+      "latency_ms": 606.8,
+      "json_valid": true,
+      "issues": [],
+      "value": 2200,
+      "raw": "{\"color_temp_kelvin\": 2200, \"reason\": \"It is currently nighttime.\"}"
+    },
+    {
+      "test": "late_night_overcast",
+      "run": 1,
+      "latency_ms": 509.0,
+      "json_valid": true,
+      "issues": [
+        "wrong_value(3000_expected_2000-2800)"
+      ],
+      "value": 3000,
+      "raw": "{\"color_temp_kelvin\": 3000, \"reason\": \"Early morning period.\"}"
+    },
+    {
+      "test": "late_night_overcast",
+      "run": 2,
+      "latency_ms": 623.8,
+      "json_valid": true,
+      "issues": [
+        "wrong_value(3000_expected_2000-2800)"
+      ],
+      "value": 3000,
+      "raw": "{\"color_temp_kelvin\": 3000, \"reason\": \"Evening period starts at 3:00 AM.\"}"
+    },
+    {
+      "test": "late_night_overcast",
+      "run": 3,
+      "latency_ms": 717.1,
+      "json_valid": true,
+      "issues": [
+        "wrong_value(4000_expected_2000-2800)"
+      ],
+      "value": 4000,
+      "raw": "{\"color_temp_kelvin\": 4000, \"reason\": \"It is daytime (hour = 3), which takes priority over the partly_cloudy weather.\"}"
+    },
+    {
+      "test": "late_night_overcast",
+      "run": 4,
+      "latency_ms": 819.0,
+      "json_valid": true,
+      "issues": [],
+      "value": 2700,
+      "raw": "{\"color_temp_kelvin\": 2700, \"reason\": \"partly_cloudy weather dictates the need for warm white light despite being daytime.\"}"
+    },
+    {
+      "test": "late_night_overcast",
+      "run": 5,
+      "latency_ms": 635.8,
+      "json_valid": true,
+      "issues": [
+        "wrong_value(3000_expected_2000-2800)"
+      ],
+      "value": 3000,
+      "raw": "{\"color_temp_kelvin\": 3000, \"reason\": \"It is still daytime despite the partly cloudy weather.\"}"
+    },
+    {
+      "test": "late_night_overcast",
+      "run": 6,
+      "latency_ms": 797.8,
+      "json_valid": true,
+      "issues": [
+        "wrong_value(3200_expected_2000-2800)"
+      ],
+      "value": 3200,
+      "raw": "{\"color_temp_kelvin\": 3200, \"reason\": \"partly cloudy weather suggests an overcast/rainy period but the hour is too early to switch yet\"}"
+    },
+    {
+      "test": "late_night_overcast",
+      "run": 7,
+      "latency_ms": 739.8,
+      "json_valid": true,
+      "issues": [
+        "wrong_value(3000_expected_2000-2800)"
+      ],
+      "value": 3000,
+      "raw": "{\"color_temp_kelvin\": 3000, \"reason\": \"time of day (3 AM) takes priority over weather (partly_cloudy) for evening color temperature range.\"}"
+    },
+    {
+      "test": "late_night_overcast",
+      "run": 8,
+      "latency_ms": 794.7,
+      "json_valid": true,
+      "issues": [
+        "wrong_value(5500_expected_2000-2800)"
+      ],
+      "value": 5500,
+      "raw": "{\"color_temp_kelvin\": 5500, \"reason\": \"It's daytime (3:00 AM), so the cool white range is appropriate.\"}"
+    },
+    {
+      "test": "late_night_overcast",
+      "run": 9,
+      "latency_ms": 612.9,
+      "json_valid": true,
+      "issues": [],
+      "value": 2500,
+      "raw": "{\"color_temp_kelvin\": 2500, \"reason\": \"It is evening time.\"}"
+    },
+    {
+      "test": "late_night_overcast",
+      "run": 10,
+      "latency_ms": 617.0,
+      "json_valid": true,
+      "issues": [],
+      "value": 2500,
+      "raw": "{\"color_temp_kelvin\": 2500, \"reason\": \"It is evening.\"}"
+    },
+    {
+      "test": "midnight",
+      "run": 1,
+      "latency_ms": 877.0,
+      "json_valid": true,
+      "issues": [],
+      "value": 2200,
+      "raw": "{\"color_temp_kelvin\": 2200, \"reason\": \"it's nighttime and the current hour is 0, indicating midnight, which falls under night/clear-night conditions in the color temperature guide.\"}"
+    },
+    {
+      "test": "midnight",
+      "run": 2,
+      "latency_ms": 554.6,
+      "json_valid": true,
+      "issues": [],
+      "value": 2200,
+      "raw": "{\"color_temp_kelvin\": 2200, \"reason\": \"It is currently nighttime and the weather is clear.\"}"
+    },
+    {
+      "test": "midnight",
+      "run": 3,
+      "latency_ms": 816.5,
+      "json_valid": true,
+      "issues": [],
+      "value": 2200,
+      "raw": "{\"color_temp_kelvin\": 2200, \"reason\": \"current time of day is at 0 hours, which takes priority over weather for lighting color temperature adjustments\"}"
+    },
+    {
+      "test": "midnight",
+      "run": 4,
+      "latency_ms": 663.1,
+      "json_valid": true,
+      "issues": [],
+      "value": 2200,
+      "raw": "{\"color_temp_kelvin\": 2200, \"reason\": \"It is currently nighttime and time takes priority over weather.\"}"
+    },
+    {
+      "test": "midnight",
+      "run": 5,
+      "latency_ms": 641.9,
+      "json_valid": true,
+      "issues": [],
+      "value": 2200,
+      "raw": "{\"color_temp_kelvin\": 2200, \"reason\": \"it is clear outside and the current hour is 0, indicating nighttime.\"}"
+    },
+    {
+      "test": "midnight",
+      "run": 6,
+      "latency_ms": 643.2,
+      "json_valid": true,
+      "issues": [],
+      "value": 2200,
+      "raw": "{\"color_temp_kelvin\": 2200, \"reason\": \"It's clear outside and the current hour is 0, indicating it's nighttime.\"}"
+    },
+    {
+      "test": "midnight",
+      "run": 7,
+      "latency_ms": 611.8,
+      "json_valid": true,
+      "issues": [],
+      "value": 2200,
+      "raw": "{\"color_temp_kelvin\": 2200, \"reason\": \"it's a clear night outside\"}"
+    },
+    {
+      "test": "midnight",
+      "run": 8,
+      "latency_ms": 612.7,
+      "json_valid": true,
+      "issues": [],
+      "value": 2200,
+      "raw": "{\"color_temp_kelvin\": 2200, \"reason\": \"clear-night weather conditions prevail\"}"
+    },
+    {
+      "test": "midnight",
+      "run": 9,
+      "latency_ms": 819.7,
+      "json_valid": true,
+      "issues": [],
+      "value": 2200,
+      "raw": "{\"color_temp_kelvin\": 2200, \"reason\": \"It's nighttime and the room's color temperature should be set to provide warm lighting.\"}"
+    },
+    {
+      "test": "midnight",
+      "run": 10,
+      "latency_ms": 615.8,
+      "json_valid": true,
+      "issues": [],
+      "value": 2200,
+      "raw": "{\"color_temp_kelvin\": 2200, \"reason\": \"Clear night with minimal light pollution\"}"
+    }
+  ],
+  "fredrezones55/Qwopus3.5:latest": [
+    {
+      "test": "morning_sunny",
+      "run": 1,
+      "latency_ms": 9320.1,
+      "json_valid": true,
+      "issues": [],
+      "value": 4000,
+      "raw": "{\"color_temp_kelvin\": 4000, \"reason\": \"At 7 AM on a sunny day, cool white light (4000K) provides natural energy while matching the bright, clear daylight conditions\"}"
+    },
+    {
+      "test": "morning_sunny",
+      "run": 2,
+      "latency_ms": 8281.9,
+      "json_valid": true,
+      "issues": [],
+      "value": 4000,
+      "raw": "```json\n{\n  \"color_temp_kelvin\": 4000,\n  \"reason\": \"Current time is 7am, which is still early morning, so I'm setting a cool white color temperature of 4000K that mimics the natural transition from night to day, though slightly warmer than pure noon sunlight.\"\n}\n```"
+    },
+    {
+      "test": "morning_sunny",
+      "run": 3,
+      "latency_ms": 6049.8,
+      "json_valid": true,
+      "issues": [],
+      "value": 4500,
+      "raw": "{\"color_temp_kelvin\": 4500, \"reason\": \"It is 7 AM with sunny weather, so I'm using a cool white temperature in the daytime range for clear skies, balancing the early morning light with the sunny conditions.\"}"
+    },
+    {
+      "test": "morning_sunny",
+      "run": 4,
+      "latency_ms": 6554.9,
+      "json_valid": true,
+      "issues": [],
+      "value": 4500,
+      "raw": "{\n  \"color_temp_kelvin\": 4500,\n  \"reason\": \"It's currently 7 AM with sunny weather, so cool white light between 4000-5000 Kelvin is appropriate for clear daytime conditions.\"\n}"
+    },
+    {
+      "test": "morning_sunny",
+      "run": 5,
+      "latency_ms": 5632.4,
+      "json_valid": true,
+      "issues": [],
+      "value": 4500,
+      "raw": "{\n  \"color_temp_kelvin\": 4500,\n  \"reason\": \"At 7 AM with sunny weather, a cool white temperature of 4500K best matches natural daylight conditions.\"\n}"
+    },
+    {
+      "test": "morning_sunny",
+      "run": 6,
+      "latency_ms": 6658.7,
+      "json_valid": true,
+      "issues": [],
+      "value": 4500,
+      "raw": "```json\n{\n  \"color_temp_kelvin\": 4500,\n  \"reason\": \"It is 7 AM on a sunny day, so a cool white temperature around 4500 K matches the bright natural light.\"\n}\n```"
+    },
+    {
+      "test": "morning_sunny",
+      "run": 7,
+      "latency_ms": 5728.7,
+      "json_valid": true,
+      "issues": [],
+      "value": 4000,
+      "raw": "{\"color_temp_kelvin\": 4000, \"reason\": \"It is currently 7am on a sunny day, so cool white light at 4000K is appropriate for clear/sunny daytime conditions.\"}"
+    },
+    {
+      "test": "morning_sunny",
+      "run": 8,
+      "latency_ms": 6349.2,
+      "json_valid": false,
+      "issues": [
+        "json_parse_failed"
+      ],
+      "value": null,
+      "raw": "{\"color_temp_kelvin\": 4500, \"reason\": \"At hour 7 (morning) with sunny weather, I'll set the light to 4500K for cool white light that matches the bright natural daylight conditions.}"
+    },
+    {
+      "test": "morning_sunny",
+      "run": 9,
+      "latency_ms": 6351.2,
+      "json_valid": true,
+      "issues": [],
+      "value": 4500,
+      "raw": "```json\n{\"color_temp_kelvin\": 4500, \"reason\": \"At 7 AM on a sunny day, the clear daytime conditions warrant a neutral-cool white setting between 4000-5000K.\"}\n```"
+    },
+    {
+      "test": "morning_sunny",
+      "run": 10,
+      "latency_ms": 6961.5,
+      "json_valid": true,
+      "issues": [],
+      "value": 4500,
+      "raw": "```json\n{\n  \"color_temp_kelvin\": 4500,\n  \"reason\": \"Since it is 7 AM on a sunny day, a neutral cool white temperature of 4500K best mimics the clear daytime lighting conditions.\"\n}\n```"
+    },
+    {
+      "test": "midday_cloudy",
+      "run": 1,
+      "latency_ms": 10443.2,
+      "json_valid": true,
+      "issues": [],
+      "value": 3500,
+      "raw": "```json\n{\n  \"color_temp_kelvin\": 3500,\n  \"reason\": \"It is 10 AM (10:00), which is still daytime, but cloudy skies suggest leaning toward 2700-3200 K for a pleasant, slightly warm ambiance. 3500 K is a good mid-range choice for a cloudy mid-morning setting.\"\n}\n```"
+    },
+    {
+      "test": "midday_cloudy",
+      "run": 2,
+      "latency_ms": 6067.6,
+      "json_valid": true,
+      "issues": [],
+      "value": 4000,
+      "raw": "{\"color_temp_kelvin\": 4000, \"reason\": \"At hour 10 (morning/early afternoon), the cool white temperature of 4000K provides good visibility for daily activities under cloudy conditions.\"}"
+    },
+    {
+      "test": "midday_cloudy",
+      "run": 3,
+      "latency_ms": 7756.2,
+      "json_valid": true,
+      "issues": [],
+      "value": 2900,
+      "raw": "{\"color_temp_kelvin\": 2900, \"reason\": \"At 10 hours (evening), the time-based guideline of 2500-3000 Kelvin takes priority over the cloudy weather guideline, resulting in a warm white setting of 2900 Kelvin for evening ambiance.\"}"
+    },
+    {
+      "test": "midday_cloudy",
+      "run": 4,
+      "latency_ms": 10137.5,
+      "json_valid": true,
+      "issues": [],
+      "value": 3500,
+      "raw": "```json\n{\n  \"color_temp_kelvin\": 3500,\n  \"reason\": \"The current time (hour 10, which is morning/daytime) takes priority over the cloudy weather, so the color temperature is set to the cool white range of 4000-5000 Kelvin, chosen as 3500 as a reasonable compromise within that range.\"\n}\n```"
+    },
+    {
+      "test": "midday_cloudy",
+      "run": 5,
+      "latency_ms": 5938.3,
+      "json_valid": true,
+      "issues": [],
+      "value": 2800,
+      "raw": "{\"color_temp_kelvin\": 2800, \"reason\": \"At 10:00 (evening), I select 2800K to match the warm evening lighting, taking priority over cloudy weather.\"}"
+    },
+    {
+      "test": "midday_cloudy",
+      "run": 6,
+      "latency_ms": 5530.1,
+      "json_valid": true,
+      "issues": [],
+      "value": 2700,
+      "raw": "{\"color_temp_kelvin\": 2700, \"reason\": \"Evening hours (10 PM) takes priority over cloudy weather, requiring warm lighting at 2700K for comfortable nighttime ambiance.\"}"
+    },
+    {
+      "test": "midday_cloudy",
+      "run": 7,
+      "latency_ms": 6552.1,
+      "json_valid": true,
+      "issues": [],
+      "value": 2700,
+      "raw": "{\"color_temp_kelvin\": 2700, \"reason\": \"At hour 10 (10 AM), time of day takes priority over weather, and since it's daytime but with cloudy conditions, 2700K warm white is appropriate.\"}"
+    },
+    {
+      "test": "midday_cloudy",
+      "run": 8,
+      "latency_ms": 10243.2,
+      "json_valid": true,
+      "issues": [],
+      "value": 2700,
+      "raw": "{\n  \"color_temp_kelvin\": 2700,\n  \"reason\": \"Since it is 10 AM (evening time in this fictional scenario) but the context appears to be daytime (10 AM), and cloudy weather is current, I'll use the cloudy/rainy guideline of 2700-3200 Kelvin for a warm white that works well with overcast conditions.\"\n}"
+    },
+    {
+      "test": "midday_cloudy",
+      "run": 9,
+      "latency_ms": 7575.2,
+      "json_valid": true,
+      "issues": [],
+      "value": 3000,
+      "raw": "```json\n{\n  \"color_temp_kelvin\": 3000,\n  \"reason\": \"At 10pm it is evening, and the color temperature guide specifies 2500\u20133000 Kelvin for evening, so 3000 Kelvin is selected.\"\n}\n```"
+    },
+    {
+      "test": "midday_cloudy",
+      "run": 10,
+      "latency_ms": 8191.5,
+      "json_valid": true,
+      "issues": [],
+      "value": 2750,
+      "raw": "{\"color_temp_kelvin\": 2750, \"reason\": \"At hour 10 (evening/night transition) the warm temperature range of 2500-3000K takes priority over the cloudy daytime weather, setting the living room to a cozy warm white ambiance suitable for evening relaxation.\"}"
+    },
+    {
+      "test": "afternoon_rainy",
+      "run": 1,
+      "latency_ms": 7563.0,
+      "json_valid": true,
+      "issues": [],
+      "value": 2850,
+      "raw": "```json\n{\n  \"color_temp_kelvin\": 2850,\n  \"reason\": \"Evening hours take priority over the current rain, and a warm color temperature of 2850 Kelvin provides a cozy, comfortable glow suitable for the current time.\"\n}\n```"
+    },
+    {
+      "test": "afternoon_rainy",
+      "run": 2,
+      "latency_ms": 7877.3,
+      "json_valid": true,
+      "issues": [],
+      "value": 2700,
+      "raw": "{\n  \"color_temp_kelvin\": 2700,\n  \"reason\": \"At 14:00 during rainy weather, I selected 2700K warm white to match the overcast conditions, as weather takes priority over time of day when they don't conflict.\"\n}"
+    },
+    {
+      "test": "afternoon_rainy",
+      "run": 3,
+      "latency_ms": 9006.7,
+      "json_valid": true,
+      "issues": [],
+      "value": 2900,
+      "raw": "{\"color_temp_kelvin\": 2900, \"reason\": \"At 14:00 during rainy conditions, I am setting the color temperature to 2900K, which falls within the overcast/rainy range of 2700-3200K to create a warm, cozy atmosphere that complements the cloudy weather.\"}"
+    },
+    {
+      "test": "afternoon_rainy",
+      "run": 4,
+      "latency_ms": 8525.6,
+      "json_valid": true,
+      "issues": [],
+      "value": 2800,
+      "raw": "```json\n{\n  \"color_temp_kelvin\": 2800,\n  \"reason\": \"At 14:00 (afternoon), the cool daylight conditions override the rainy weather, so 2700-3200 Kelvin is chosen to match typical overcast/rainy settings.\"\n}\n```"
+    },
+    {
+      "test": "afternoon_rainy",
+      "run": 5,
+      "latency_ms": 6743.0,
+      "json_valid": true,
+      "issues": [],
+      "value": 2700,
+      "raw": "{\n  \"color_temp_kelvin\": 2700,\n  \"reason\": \"At 14:00 (2 PM), the light is set to 2700K to match the overcast/rainy weather conditions.\"\n}"
+    },
+    {
+      "test": "afternoon_rainy",
+      "run": 6,
+      "latency_ms": 9334.8,
+      "json_valid": true,
+      "issues": [],
+      "value": 3200,
+      "raw": "```json\n{\n  \"color_temp_kelvin\": 3200,\n  \"reason\": \"At 14:00 (2:00 PM), the time of day is daylight with rain, so I'm choosing 3200 K from the 2700-3200 K range for rainy conditions.\"\n}\n```"
+    },
+    {
+      "test": "afternoon_rainy",
+      "run": 7,
+      "latency_ms": 7370.3,
+      "json_valid": true,
+      "issues": [],
+      "value": 3000,
+      "raw": "{\n  \"color_temp_kelvin\": 3000,\n  \"reason\": \"Since it is currently 14:00 (2 PM), time of day takes priority and evening setting should be used with 2500-3000 Kelvin\"\n}"
+    },
+    {
+      "test": "afternoon_rainy",
+      "run": 8,
+      "latency_ms": 7372.3,
+      "json_valid": true,
+      "issues": [],
+      "value": 2700,
+      "raw": "```json\n{\n  \"color_temp_kelvin\": 2700,\n  \"reason\": \"At 14:00 with rainy weather, I choose 2700K to match the overcast conditions and create a warm, cozy atmosphere.\"\n}\n```"
+    },
+    {
+      "test": "afternoon_rainy",
+      "run": 9,
+      "latency_ms": 9114.1,
+      "json_valid": true,
+      "issues": [],
+      "value": 3000,
+      "raw": "{\"color_temp_kelvin\": 3000, \"reason\": \"It is daytime (14:00) with rainy weather, so I set the light to 3000K which is warm white, appropriately balancing the current weather (which calls for 2700-3200K) while acknowledging that daylight still provides ample illumination.\"}"
+    },
+    {
+      "test": "afternoon_rainy",
+      "run": 10,
+      "latency_ms": 6867.4,
+      "json_valid": true,
+      "issues": [],
+      "value": 3000,
+      "raw": "```json\n{\n  \"color_temp_kelvin\": 3000,\n  \"reason\": \"Since it is 14:00 (evening), the time of day takes priority over the rainy weather, requiring a warm white color temperature.\"\n}\n```"
+    },
+    {
+      "test": "noon_fog",
+      "run": 1,
+      "latency_ms": 6554.9,
+      "json_valid": true,
+      "issues": [],
+      "value": 4000,
+      "raw": "```json\n{\n  \"color_temp_kelvin\": 4000,\n  \"reason\": \"Since it is midday (12:00), time of day takes priority over weather, requiring a clear daytime color temperature.\"\n}\n```"
+    },
+    {
+      "test": "noon_fog",
+      "run": 2,
+      "latency_ms": 9721.9,
+      "json_valid": true,
+      "issues": [],
+      "value": 3000,
+      "raw": "{\n  \"color_temp_kelvin\": 3000,\n  \"reason\": \"It's noon (24h: 12), so I'm setting it to 3000K as evening lighting would typically be 2500-3000K, though noon is technically daytime, the fog suggests using a warm white similar to overcast conditions\"\n}"
+    },
+    {
+      "test": "noon_fog",
+      "run": 3,
+      "latency_ms": 8442.8,
+      "json_valid": true,
+      "issues": [
+        "wrong_value(2500_expected_2700-4000)"
+      ],
+      "value": 2500,
+      "raw": "```json\n{\"color_temp_kelvin\": 2500, \"reason\": \"At 12:00 during the day, the time of day priority dictates using evening warm tones (2500-3000K) despite foggy weather, creating a cozy atmosphere suitable for a living room environment.\"}\n```"
+    },
+    {
+      "test": "noon_fog",
+      "run": 4,
+      "latency_ms": 5472.1,
+      "json_valid": true,
+      "issues": [],
+      "value": 4000,
+      "raw": "{\"color_temp_kelvin\": 4000, \"reason\": \"At noon (clear daylight) the neutral daylight temperature of 4000K best matches the natural ambient light of a sunny day.\"}"
+    },
+    {
+      "test": "noon_fog",
+      "run": 5,
+      "latency_ms": 10964.7,
+      "json_valid": true,
+      "issues": [],
+      "value": 2800,
+      "raw": "```json\n{\n  \"color_temp_kelvin\": 2800,\n  \"reason\": \"At noon (12:00) with foggy weather, I'm setting the color temperature to 2800 Kelvin to match the warm, diffused light conditions typical of an overcast day, which aligns with the overcast/rainy weather recommendation of 2700-3200 Kelvin.\"\n}\n```"
+    },
+    {
+      "test": "noon_fog",
+      "run": 6,
+      "latency_ms": 8704.6,
+      "json_valid": true,
+      "issues": [],
+      "value": 3500,
+      "raw": "{\"color_temp_kelvin\": 3500, \"reason\": \"Since it is noon (midday), the color temperature should be in the clear/sunny daytime range of 4000-5000 Kelvin, though the foggy weather suggests a slightly lower value, so a moderate 3500 Kelvin is appropriate.\"}"
+    },
+    {
+      "test": "noon_fog",
+      "run": 7,
+      "latency_ms": 6348.2,
+      "json_valid": true,
+      "issues": [
+        "wrong_value(4500_expected_2700-4000)"
+      ],
+      "value": 4500,
+      "raw": "```json\n{\n  \"color_temp_kelvin\": 4500,\n  \"reason\": \"Time is 12 (daytime), so I'm using a cool white temperature despite the foggy weather\"\n}\n```"
+    },
+    {
+      "test": "noon_fog",
+      "run": 8,
+      "latency_ms": 6143.3,
+      "json_valid": true,
+      "issues": [
+        "wrong_value(4500_expected_2700-4000)"
+      ],
+      "value": 4500,
+      "raw": "{\"color_temp_kelvin\": 4500, \"reason\": \"Time of day takes priority over weather, and midday requires cool white at 4000-5000 Kelvin for clear/sunny conditions\"}"
+    },
+    {
+      "test": "noon_fog",
+      "run": 9,
+      "latency_ms": 12082.3,
+      "json_valid": true,
+      "issues": [],
+      "value": 2700,
+      "raw": "{\"color_temp_kelvin\": 2700, \"reason\": \"At noon on a foggy day, I'll set the light to 2700K as this falls under the overcast/rainy weather category (2700-3200K) since fog creates an overcast lighting condition similar to rain, and while it's daytime, the foggy conditions override the typical clear/su"
+    },
+    {
+      "test": "noon_fog",
+      "run": 10,
+      "latency_ms": 9932.9,
+      "json_valid": true,
+      "issues": [
+        "wrong_value(4500_expected_2700-4000)"
+      ],
+      "value": 4500,
+      "raw": "```json\n{\n  \"color_temp_kelvin\": 4500,\n  \"reason\": \"Since it is 12:00 (noon) during daytime, the time of day takes priority over the foggy weather, and cool white lighting (4000-5000K) is most appropriate for clear/sunny daytime conditions.\"\n}\n```"
+    },
+    {
+      "test": "noon_sunny",
+      "run": 1,
+      "latency_ms": 9011.0,
+      "json_valid": true,
+      "issues": [],
+      "value": 4500,
+      "raw": "```json\n{\n  \"color_temp_kelvin\": 4500,\n  \"reason\": \"The living room light is set to 4500 Kelvin because it is midday with clear, sunny weather, requiring a cool-white daylight color temperature according to the guide.\"\n}\n```"
+    },
+    {
+      "test": "noon_sunny",
+      "run": 2,
+      "latency_ms": 8196.4,
+      "json_valid": true,
+      "issues": [],
+      "value": 5000,
+      "raw": "```json\n{\n  \"color_temp_kelvin\": 5000,\n  \"reason\": \"It is noon, which is daytime, so 5000K (cool white) is appropriate even though the weather is sunny.\"\n}\n```"
+    },
+    {
+      "test": "noon_sunny",
+      "run": 3,
+      "latency_ms": 11157.9,
+      "json_valid": true,
+      "issues": [],
+      "value": 4000,
+      "raw": "```json\n{\n  \"color_temp_kelvin\": 4000,\n  \"reason\": \"The current time is 12 (noon) in a clear, sunny day, which corresponds to the Cool White range (4000\u20135000 K), so I have set the temperature to the lower end of that range (4000 K).\"\n}\n```"
+    },
+    {
+      "test": "noon_sunny",
+      "run": 4,
+      "latency_ms": 7678.8,
+      "json_valid": true,
+      "issues": [],
+      "value": 4500,
+      "raw": "{\"color_temp_kelvin\": 4500, \"reason\": \"Current time is 12 PM on a sunny day, which falls into the clear/sunny daytime category requiring 4000-5000K color temperature.\"}"
+    },
+    {
+      "test": "noon_sunny",
+      "run": 5,
+      "latency_ms": 8498.0,
+      "json_valid": true,
+      "issues": [],
+      "value": 4500,
+      "raw": "```json\n{\n  \"color_temp_kelvin\": 4500,\n  \"reason\": \"It is noon, a clear and sunny daytime, so the appropriate setting is cool white (4000\u20135000\u202fK).\"\n}\n```"
+    },
+    {
+      "test": "noon_sunny",
+      "run": 6,
+      "latency_ms": 9525.4,
+      "json_valid": true,
+      "issues": [],
+      "value": 5000,
+      "raw": "```json\n{\n  \"color_temp_kelvin\": 5000,\n  \"reason\": \"At noon in clear, sunny conditions, a neutral-cool temperature around 5000 K mimics daylight and provides accurate color rendering for tasks like cooking, reading, or computer work.\"\n}\n```"
+    },
+    {
+      "test": "noon_sunny",
+      "run": 7,
+      "latency_ms": 8297.3,
+      "json_valid": true,
+      "issues": [],
+      "value": 4500,
+      "raw": "{\n  \"color_temp_kelvin\": 4500,\n  \"reason\": \"At 12:00 PM during sunny weather, the appropriate color temperature is 4000-5000K to match the clear daytime conditions.\"\n}"
+    },
+    {
+      "test": "noon_sunny",
+      "run": 8,
+      "latency_ms": 8266.1,
+      "json_valid": true,
+      "issues": [],
+      "value": 4500,
+      "raw": "```json\n{\n  \"color_temp_kelvin\": 4500,\n  \"reason\": \"Time of day takes priority over weather, and noon falls within the clear/sunny daytime range of 4000-5000 Kelvin.\"\n}\n```"
+    },
+    {
+      "test": "noon_sunny",
+      "run": 9,
+      "latency_ms": 7800.0,
+      "json_valid": true,
+      "issues": [],
+      "value": 4500,
+      "raw": "{\"color_temp_kelvin\": 4500, \"reason\": \"Since it is 12:00 (noon) and sunny, the current time takes priority as cool daylight conditions require 4000-5000 Kelvin.\"}"
+    },
+    {
+      "test": "noon_sunny",
+      "run": 10,
+      "latency_ms": 9941.6,
+      "json_valid": true,
+      "issues": [],
+      "value": 4500,
+      "raw": "```json\n{\n  \"color_temp_kelvin\": 4500,\n  \"reason\": \"It is 12:00 PM on a sunny day, which corresponds to clear/sunny daytime, so 4000-5000 Kelvin (cool white) is appropriate.\"\n}\n```"
+    },
+    {
+      "test": "sunrise_boundary",
+      "run": 1,
+      "latency_ms": 8495.5,
+      "json_valid": true,
+      "issues": [],
+      "value": 4500,
+      "raw": "{\n  \"color_temp_kelvin\": 4500,\n  \"reason\": \"Current time is 6:00 AM with sunny weather, which falls within the clear/sunny daytime category requiring 4000-5000 Kelvin cool white.\"\n}"
+    },
+    {
+      "test": "sunrise_boundary",
+      "run": 2,
+      "latency_ms": 6964.5,
+      "json_valid": true,
+      "issues": [],
+      "value": 4000,
+      "raw": "{\"color_temp_kelvin\": 4000, \"reason\": \"At 6 AM (dawn/morning), cool white (4000K) best matches the natural transitioning light as the sun rises.\"}"
+    },
+    {
+      "test": "sunrise_boundary",
+      "run": 3,
+      "latency_ms": 8601.2,
+      "json_valid": true,
+      "issues": [],
+      "value": 4500,
+      "raw": "{\n  \"color_temp_kelvin\": 4500,\n  \"reason\": \"At 6 AM on a sunny morning, the cool white temperature of 4500K matches the clear daylight conditions and provides bright, neutral illumination suitable for starting the day.\"\n}"
+    },
+    {
+      "test": "sunrise_boundary",
+      "run": 4,
+      "latency_ms": 6840.1,
+      "json_valid": true,
+      "issues": [],
+      "value": 4500,
+      "raw": "{\"color_temp_kelvin\": 4500, \"reason\": \"At 6 AM with sunny weather, the clear daytime setting applies, requiring cool white light at 4000-5000 Kelvin.\"}"
+    },
+    {
+      "test": "sunrise_boundary",
+      "run": 5,
+      "latency_ms": 7797.8,
+      "json_valid": true,
+      "issues": [],
+      "value": 4500,
+      "raw": "{\"color_temp_kelvin\": 4500, \"reason\": \"Since it is morning (hour 6) and sunny outside, I set the light to a cool white temperature of 4500K to match the bright daytime lighting conditions.\"}"
+    },
+    {
+      "test": "sunrise_boundary",
+      "run": 6,
+      "latency_ms": 8557.8,
+      "json_valid": true,
+      "issues": [],
+      "value": 4500,
+      "raw": "{\n  \"color_temp_kelvin\": 4500,\n  \"reason\": \"The current time is 6 AM (early morning) with sunny weather, so I'm using a cool white temperature of 4500K appropriate for clear daytime lighting.\"\n}"
+    },
+    {
+      "test": "sunrise_boundary",
+      "run": 7,
+      "latency_ms": 9680.6,
+      "json_valid": true,
+      "issues": [],
+      "value": 4000,
+      "raw": "```json\n{\n  \"color_temp_kelvin\": 4000,\n  \"reason\": \"At 6:00 with sunny weather, 4000K provides appropriate bright daylight for clear daytime, though overcast days would call for 2700-3200K.\"\n}\n```"
+    },
+    {
+      "test": "sunrise_boundary",
+      "run": 8,
+      "latency_ms": 7303.7,
+      "json_valid": true,
+      "issues": [],
+      "value": 4500,
+      "raw": "{\n  \"color_temp_kelvin\": 4500,\n  \"reason\": \"Since it's 6am with sunny weather, daytime conditions take priority and warrant a cool white temperature around 4500K.\"\n}"
+    },
+    {
+      "test": "sunrise_boundary",
+      "run": 9,
+      "latency_ms": 9155.4,
+      "json_valid": true,
+      "issues": [],
+      "value": 5000,
+      "raw": "```json\n{\n  \"color_temp_kelvin\": 5000,\n  \"reason\": \"At 6:00 AM on a sunny morning, cool white light (5000K) best mimics natural sunlight to keep the space bright and energizing.\"\n}\n```"
+    },
+    {
+      "test": "sunrise_boundary",
+      "run": 10,
+      "latency_ms": 6767.1,
+      "json_valid": true,
+      "issues": [],
+      "value": 4500,
+      "raw": "{\"color_temp_kelvin\": 4500, \"reason\": \"Since it is 6 AM and sunny, clear/sunny daytime color temperature of 4000-5000 Kelvin is appropriate\"}"
+    },
+    {
+      "test": "evening_clear",
+      "run": 1,
+      "latency_ms": 11974.0,
+      "json_valid": true,
+      "issues": [],
+      "value": 2700,
+      "raw": "```json\n{\"color_temp_kelvin\": 2700, \"reason\": \"Since the hour is 19:00, which falls within the evening time, the priority rule means we apply the evening guideline of 2500-3000 Kelvin, selecting a mid-range value of 2700 K to maintain a warm, comfortable ambiance for the living room.\"}\n```"
+    },
+    {
+      "test": "evening_clear",
+      "run": 2,
+      "latency_ms": 8882.5,
+      "json_valid": true,
+      "issues": [],
+      "value": 2800,
+      "raw": "```json\n{\n  \"color_temp_kelvin\": 2800,\n  \"reason\": \"It is 19:00 in the evening, so 2500-3000 Kelvin (warm) is appropriate per the rules.\"\n}\n```"
+    },
+    {
+      "test": "evening_clear",
+      "run": 3,
+      "latency_ms": 9002.2,
+      "json_valid": true,
+      "issues": [],
+      "value": 2500,
+      "raw": "{\n  \"color_temp_kelvin\": 2500,\n  \"reason\": \"Since the current time is 19:00 (7 PM), which falls in the evening, the appropriate color temperature range is 2500-3000 Kelvin.\"\n}"
+    },
+    {
+      "test": "evening_clear",
+      "run": 4,
+      "latency_ms": 8858.3,
+      "json_valid": false,
+      "issues": [
+        "json_parse_failed"
+      ],
+      "value": null,
+      "raw": "{\"color_temp_kelvin\": 2650, \"reason\": \"At 19:00 (7 PM) in the evening, the color temperature should be between 2500-3000 Kelvin to create a warm, cozy atmosphere appropriate for evening hours.\""
+    },
+    {
+      "test": "evening_clear",
+      "run": 5,
+      "latency_ms": 10708.5,
+      "json_valid": false,
+      "issues": [
+        "json_parse_failed"
+      ],
+      "value": null,
+      "raw": "{\"color_temp_kelvin\": 2500, \"reason\": \"Clear nighttime conditions warrant 2200-2700 Kelvin for a warm, relaxing atmosphere, but clear weather alone would suggest 4000-5000 Kelvin, so the evening time of day takes priority with a value of 2500 Kelvin.\""
+    },
+    {
+      "test": "evening_clear",
+      "run": 6,
+      "latency_ms": 11511.4,
+      "json_valid": true,
+      "issues": [],
+      "value": 2700,
+      "raw": "```json\n{\n  \"color_temp_kelvin\": 2700,\n  \"reason\": \"At 19:00 (7 PM) in the evening with clear weather, a color temperature of 2700K provides a warm, relaxing ambiance suitable for evening hours, taking time of day as the priority factor over the clear sky condition.\"\n}\n```"
+    },
+    {
+      "test": "evening_clear",
+      "run": 7,
+      "latency_ms": 6163.8,
+      "json_valid": true,
+      "issues": [],
+      "value": 2500,
+      "raw": "{\"color_temp_kelvin\": 2500, \"reason\": \"Evening takes priority over weather, and 2500K (warm white) is appropriate for evening lighting\"}"
+    },
+    {
+      "test": "evening_clear",
+      "run": 8,
+      "latency_ms": 9669.7,
+      "json_valid": true,
+      "issues": [],
+      "value": 2600,
+      "raw": "```json\n{\n  \"color_temp_kelvin\": 2600,\n  \"reason\": \"At 19:00, clear night conditions warrant a warm to very warm color temperature in the 2200-2700K range to match the evening environment.\"\n}\n```"
+    },
+    {
+      "test": "evening_clear",
+      "run": 9,
+      "latency_ms": 9326.0,
+      "json_valid": true,
+      "issues": [],
+      "value": 2500,
+      "raw": "{\n  \"color_temp_kelvin\": 2500,\n  \"reason\": \"Since it is evening (hour 19) with clear weather, evening lighting takes priority over weather conditions, requiring a warm temperature in the range of 2500-3000 Kelvin\"\n}"
+    },
+    {
+      "test": "evening_clear",
+      "run": 10,
+      "latency_ms": 11455.1,
+      "json_valid": true,
+      "issues": [],
+      "value": 2500,
+      "raw": "```json\n{\n  \"color_temp_kelvin\": 2500,\n  \"reason\": \"Since it is evening at 19:00, the color temperature should be set to 2500-3000K for a warm ambiance, with 2500K chosen as a lower end of the recommended range.\"\n}\n```"
+    },
+    {
+      "test": "evening_snow",
+      "run": 1,
+      "latency_ms": 9056.4,
+      "json_valid": true,
+      "issues": [],
+      "value": 2800,
+      "raw": "```json\n{\n  \"color_temp_kelvin\": 2800,\n  \"reason\": \"Evening time takes priority over snowy weather conditions per the rules, placing the temperature in the 2500-3000 Kelvin warm evening range.\"\n}\n```"
+    },
+    {
+      "test": "evening_snow",
+      "run": 2,
+      "latency_ms": 7955.0,
+      "json_valid": true,
+      "issues": [],
+      "value": 2500,
+      "raw": "{\"color_temp_kelvin\": 2500, \"reason\": \"It is evening (hour 20), so the color temperature should be set to warm 2500 Kelvin as the time of day takes priority over the snowy weather condition.\"}"
+    },
+    {
+      "test": "evening_snow",
+      "run": 3,
+      "latency_ms": 8939.7,
+      "json_valid": true,
+      "issues": [],
+      "value": 2600,
+      "raw": "{\"color_temp_kelvin\": 2600, \"reason\": \"At 8 PM (20:00), the time of day takes priority over the snowy weather condition, requiring a warm evening color temperature in the 2500-3000K range.\"}"
+    },
+    {
+      "test": "evening_snow",
+      "run": 4,
+      "latency_ms": 7178.9,
+      "json_valid": true,
+      "issues": [],
+      "value": 2200,
+      "raw": "{\"color_temp_kelvin\": 2200, \"reason\": \"At hour 20 (night) with snowy conditions, the time of day priority dictates a very warm color temperature of 2200 Kelvin.\"}"
+    },
+    {
+      "test": "evening_snow",
+      "run": 5,
+      "latency_ms": 7874.0,
+      "json_valid": true,
+      "issues": [],
+      "value": 2700,
+      "raw": "```json\n{\n  \"color_temp_kelvin\": 2700,\n  \"reason\": \"Evening takes priority over weather conditions, and 2700K provides the appropriate warm color temperature for evening hours.\"\n}\n```"
+    },
+    {
+      "test": "evening_snow",
+      "run": 6,
+      "latency_ms": 10033.5,
+      "json_valid": false,
+      "issues": [
+        "json_parse_failed"
+      ],
+      "value": null,
+      "raw": "{\"color_temp_kelvin\": 2600, \"reason\": \"Since it's 8 PM (evening), time of day takes priority and suggests 2500-3000 Kelvin warm lighting for evening ambiance, even though the snowy weather might suggest 2700-3200 Kelvin.\""
+    },
+    {
+      "test": "evening_snow",
+      "run": 7,
+      "latency_ms": 12698.6,
+      "json_valid": true,
+      "issues": [],
+      "value": 2500,
+      "raw": "```json\n{\n  \"color_temp_kelvin\": 2500,\n  \"reason\": \"The current time is 20:00 (8 PM), which is evening, so according to the guide the appropriate color temperature range is 2500-3000 Kelvin (warm), and time takes priority over weather, so the snowy conditions do not override the evening setting.\"\n}\n"
+    },
+    {
+      "test": "evening_snow",
+      "run": 8,
+      "latency_ms": 8089.4,
+      "json_valid": false,
+      "issues": [
+        "json_parse_failed"
+      ],
+      "value": null,
+      "raw": "{\"color_temp_kelvin\": 2500, \"reason\": \"Since it's 8 PM (evening time), I should set the light to 2500K which provides the warm evening ambiance as specified in the guide for evening hours.\""
+    },
+    {
+      "test": "evening_snow",
+      "run": 9,
+      "latency_ms": 10956.2,
+      "json_valid": true,
+      "issues": [],
+      "value": 2500,
+      "raw": "{\n  \"color_temp_kelvin\": 2500,\n  \"reason\": \"At 20:00 (evening), the 2500-3000 Kelvin warm range takes priority per the time-of-day rule, despite the snowy weather suggesting 2700-3200K overcast conditions.\"\n}"
+    },
+    {
+      "test": "evening_snow",
+      "run": 10,
+      "latency_ms": 8551.3,
+      "json_valid": true,
+      "issues": [],
+      "value": 2200,
+      "raw": "```json\n{\n  \"color_temp_kelvin\": 2200,\n  \"reason\": \"Since it is 20:00 (evening), I set the light to a very warm 2200K to match the evening ambiance.\"\n}\n```"
+    },
+    {
+      "test": "evening_boundary",
+      "run": 1,
+      "latency_ms": 10801.5,
+      "json_valid": true,
+      "issues": [],
+      "value": 2500,
+      "raw": "```json\n{\n  \"color_temp_kelvin\": 2500,\n  \"reason\": \"It is 17:00 (5pm) in a clear sky, so the time of day is evening and the color temperature should be in the 2500\u20133000 Kelvin warm range.\"\n}\n```"
+    },
+    {
+      "test": "evening_boundary",
+      "run": 2,
+      "latency_ms": 8077.9,
+      "json_valid": true,
+      "issues": [],
+      "value": 3000,
+      "raw": "{\"color_temp_kelvin\": 3000, \"reason\": \"At 17:00 (5 PM) in the evening, 3000 Kelvin provides appropriate warm lighting for evening hours, which takes priority over the clear weather conditions.\"}"
+    },
+    {
+      "test": "evening_boundary",
+      "run": 3,
+      "latency_ms": 9331.9,
+      "json_valid": false,
+      "issues": [
+        "json_parse_failed"
+      ],
+      "value": null,
+      "raw": "{\"color_temp_kelvin\": 2700, \"reason\": \"At hour 17 (5pm), the sun is setting and transitioning to evening lighting conditions, so a warm white temperature around 2700K is appropriate for this time of day, taking priority over the clear weather conditions.\""
+    },
+    {
+      "test": "evening_boundary",
+      "run": 4,
+      "latency_ms": 8292.3,
+      "json_valid": true,
+      "issues": [],
+      "value": 2500,
+      "raw": "```json\n{\"color_temp_kelvin\": 2500, \"reason\": \"Clear weather but evening time (17h) takes priority, placing us in the evening color temperature range of 2500-3000K. \"}\n```"
+    },
+    {
+      "test": "evening_boundary",
+      "run": 5,
+      "latency_ms": 7885.0,
+      "json_valid": true,
+      "issues": [
+        "wrong_value(4500_expected_2500-3500)"
+      ],
+      "value": 4500,
+      "raw": "{\"color_temp_kelvin\": 4500, \"reason\": \"At 17:00 (5 PM) the sun is still up during clear weather, so cool white light at 4500K matches natural daylight conditions best\"}"
+    },
+    {
+      "test": "evening_boundary",
+      "run": 6,
+      "latency_ms": 10955.9,
+      "json_valid": true,
+      "issues": [
+        "wrong_value(4500_expected_2500-3500)"
+      ],
+      "value": 4500,
+      "raw": "```json\n{\n  \"color_temp_kelvin\": 4500,\n  \"reason\": \"At 17:00 (5:00 PM), the time of day takes priority over the clear weather, so I select a cool white temperature of 4500 Kelvin to mimic the bright, clear daylight conditions.\"\n}\n```"
+    },
+    {
+      "test": "evening_boundary",
+      "run": 7,
+      "latency_ms": 8355.3,
+      "json_valid": false,
+      "issues": [
+        "json_parse_failed"
+      ],
+      "value": null,
+      "raw": "{\"color_temp_kelvin\": 4500, \"reason\": \"At hour 17 (late afternoon) with clear skies, the color temperature should be set to cool white (4000-5000 Kelvin) to match the natural daylight conditions.\""
+    },
+    {
+      "test": "evening_boundary",
+      "run": 8,
+      "latency_ms": 8427.0,
+      "json_valid": true,
+      "issues": [],
+      "value": 2700,
+      "raw": "```json\n{\n  \"color_temp_kelvin\": 2700,\n  \"reason\": \"Evening time of day takes priority over clear weather, requiring a warm color temperature in the range of 2500-3000K.\"\n}\n```"
+    },
+    {
+      "test": "evening_boundary",
+      "run": 9,
+      "latency_ms": 10148.6,
+      "json_valid": true,
+      "issues": [
+        "wrong_value(4500_expected_2500-3500)"
+      ],
+      "value": 4500,
+      "raw": "{\n  \"color_temp_kelvin\": 4500,\n  \"reason\": \"It is 17:00 (evening) with clear weather, so I'm using 4500 Kelvin which aligns with the clear/sunny daytime guide for cool white light appropriate for clear evening conditions\"\n}"
+    },
+    {
+      "test": "evening_boundary",
+      "run": 10,
+      "latency_ms": 12799.5,
+      "json_valid": true,
+      "issues": [],
+      "value": 2700,
+      "raw": "```json\n{\"color_temp_kelvin\": 2700, \"reason\": \"At 17:00, the clear weather would suggest 4000-5000K (cool white), but the time takes priority. This evening period calls for 2500-3000K warm light, so I am setting the light to 2700K warm white.\"}\n```"
+    },
+    {
+      "test": "night_clear",
+      "run": 1,
+      "latency_ms": 10854.3,
+      "json_valid": true,
+      "issues": [],
+      "value": 2500,
+      "raw": "```json\n{\n  \"color_temp_kelvin\": 2500,\n  \"reason\": \"At 23:00 during a clear night, the appropriate color temperature is 2500 Kelvin, which falls within the recommended range of 2200-2700 Kelvin for evening/nighttime.\"\n}\n```"
+    },
+    {
+      "test": "night_clear",
+      "run": 2,
+      "latency_ms": 10035.6,
+      "json_valid": true,
+      "issues": [],
+      "value": 2400,
+      "raw": "```json\n{\n  \"color_temp_kelvin\": 2400,\n  \"reason\": \"At 23:00 (11 PM) on a clear night, the evening/night guidelines suggest a very warm color temperature of 2200-2700 Kelvin.\"\n}\n```"
+    },
+    {
+      "test": "night_clear",
+      "run": 3,
+      "latency_ms": 9523.2,
+      "json_valid": true,
+      "issues": [],
+      "value": 2350,
+      "raw": "```json\n{\n  \"color_temp_kelvin\": 2350,\n  \"reason\": \"At 23:00 during clear-night conditions, the appropriate color temperature is 2200-2700 Kelvin to create a warm, relaxing evening atmosphere.\"\n}\n```"
+    },
+    {
+      "test": "night_clear",
+      "run": 4,
+      "latency_ms": 10250.0,
+      "json_valid": true,
+      "issues": [],
+      "value": 2400,
+      "raw": "```json\n{\n  \"color_temp_kelvin\": 2400,\n  \"reason\": \"The time is evening/night, so a warm color temperature of 2400K aligns with the recommended 2200-2700K range for night/clear-night conditions.\"\n}\n```"
+    },
+    {
+      "test": "night_clear",
+      "run": 5,
+      "latency_ms": 10126.6,
+      "json_valid": true,
+      "issues": [],
+      "value": 2400,
+      "raw": "{\n  \"color_temp_kelvin\": 2400,\n  \"reason\": \"Clear night conditions require a color temperature between 2200-2700 Kelvin, and I selected 2400 Kelvin as the middle of this range to provide a very warm, relaxing atmosphere suitable for nighttime.\"\n}"
+    },
+    {
+      "test": "night_clear",
+      "run": 6,
+      "latency_ms": 7782.5,
+      "json_valid": true,
+      "issues": [],
+      "value": 2400,
+      "raw": "{\"color_temp_kelvin\": 2400, \"reason\": \"At 23:00 on a clear night, the warm 2200-2700K range is appropriate to create a cozy evening atmosphere.\"}"
+    },
+    {
+      "test": "night_clear",
+      "run": 7,
+      "latency_ms": 10035.1,
+      "json_valid": false,
+      "issues": [
+        "json_parse_failed"
+      ],
+      "value": null,
+      "raw": "{\"color_temp_kelvin\": 2450, \"reason\": \"Since it's 23:00 (11 PM), this is clearly nighttime, so I'm setting the light to approximately 2450 Kelvin within the 2200-2700 Kelvin range specified for clear-night conditions.\""
+    },
+    {
+      "test": "night_clear",
+      "run": 8,
+      "latency_ms": 12082.0,
+      "json_valid": true,
+      "issues": [],
+      "value": 2500,
+      "raw": "```json\n{\n  \"color_temp_kelvin\": 2500,\n  \"reason\": \"At 23:00 (11 PM) during a clear night, the environment is dim and the sky has natural darkness, so a very warm light temperature is appropriate to create a relaxing atmosphere that mimics the ambient darkness while providing sufficient illumination"
+    },
+    {
+      "test": "night_clear",
+      "run": 9,
+      "latency_ms": 8128.6,
+      "json_valid": true,
+      "issues": [],
+      "value": 2500,
+      "raw": "{\"color_temp_kelvin\": 2500, \"reason\": \"It's 11 PM on a clear night, so I'm setting the color temperature to 2500K for a warm, cozy nighttime ambiance that matches the evening setting.\"}"
+    },
+    {
+      "test": "night_clear",
+      "run": 10,
+      "latency_ms": 11189.2,
+      "json_valid": true,
+      "issues": [],
+      "value": 2400,
+      "raw": "```json\n{\n  \"color_temp_kelvin\": 2400,\n  \"reason\": \"Since it is night (23:00) with clear conditions, a color temperature of 2400K falls within the recommended 2200-2700K range for a very warm, cozy evening atmosphere.\"\n}\n```"
+    },
+    {
+      "test": "late_night_overcast",
+      "run": 1,
+      "latency_ms": 8638.1,
+      "json_valid": true,
+      "issues": [],
+      "value": 2500,
+      "raw": "{\"color_temp_kelvin\": 2500, \"reason\": \"The current hour is 3 AM, which is nighttime, and according to the guide nighttime should use 2500-3000 Kelvin, so 2500 Kelvin is selected.\"}"
+    },
+    {
+      "test": "late_night_overcast",
+      "run": 2,
+      "latency_ms": 9011.0,
+      "json_valid": true,
+      "issues": [],
+      "value": 2700,
+      "raw": "```json\n{\n  \"color_temp_kelvin\": 2700,\n  \"reason\": \"At 3:00 AM with partly cloudy weather, the early morning time takes priority, requiring a warm color temperature of approximately 2700K.\"\n}\n```"
+    },
+    {
+      "test": "late_night_overcast",
+      "run": 3,
+      "latency_ms": 9557.5,
+      "json_valid": true,
+      "issues": [],
+      "value": 2700,
+      "raw": "{\n  \"color_temp_kelvin\": 2700,\n  \"reason\": \"At 3 AM (early morning/evening transition), the time of day takes priority over partly cloudy weather, so I set the light to a warm white around 2700K appropriate for evening/night lighting.\"\n}"
+    },
+    {
+      "test": "late_night_overcast",
+      "run": 4,
+      "latency_ms": 7645.1,
+      "json_valid": true,
+      "issues": [
+        "wrong_value(3000_expected_2000-2800)"
+      ],
+      "value": 3000,
+      "raw": "```json\n{\n  \"color_temp_kelvin\": 3000,\n  \"reason\": \"Evening takes priority over the partly cloudy weather, so a warm temperature of 3000K is appropriate.\"\n}\n```"
+    },
+    {
+      "test": "late_night_overcast",
+      "run": 5,
+      "latency_ms": 13004.2,
+      "json_valid": true,
+      "issues": [],
+      "value": 2800,
+      "raw": "{\n  \"color_temp_kelvin\": 2800,\n  \"reason\": \"At 3 AM, it is nighttime, so I am setting the temperature to 2800 Kelvin (warm yellow) which aligns with the evening/night range of 2500-3000 Kelvin for a cozy, relaxed atmosphere, and this takes priority over the partly_cloudy weather condition. \"\n}"
+    },
+    {
+      "test": "late_night_overcast",
+      "run": 6,
+      "latency_ms": 9795.8,
+      "json_valid": true,
+      "issues": [],
+      "value": 2700,
+      "raw": "{\"color_temp_kelvin\": 2700, \"reason\": \"At 3 AM in the early morning hours, I should set the light to 2700K to create a warm, calming atmosphere suitable for early morning or late night activities, prioritizing the time of day over the partly cloudy weather.\"}"
+    },
+    {
+      "test": "late_night_overcast",
+      "run": 7,
+      "latency_ms": 11093.8,
+      "json_valid": true,
+      "issues": [
+        "wrong_value(3000_expected_2000-2800)"
+      ],
+      "value": 3000,
+      "raw": "```json\n{\n  \"color_temp_kelvin\": 3000,\n  \"reason\": \"At 3am the house should be dark and cozy for sleeping, but the partly cloudy exterior light lets in some ambient daylight, so I\u2019ll set the light to 3000K to balance warmth with a touch of daytime clarity.\"\n}\n```"
+    },
+    {
+      "test": "late_night_overcast",
+      "run": 8,
+      "latency_ms": 9625.3,
+      "json_valid": true,
+      "issues": [
+        "wrong_value(3000_expected_2000-2800)"
+      ],
+      "value": 3000,
+      "raw": "```json\n{\n  \"color_temp_kelvin\": 3000,\n  \"reason\": \"It is 3 AM in the middle of the night, so I'm dimming the lights to 3000 K to create a warm, very dim atmosphere suitable for sleep.\"\n}\n```"
+    },
+    {
+      "test": "late_night_overcast",
+      "run": 9,
+      "latency_ms": 7958.9,
+      "json_valid": true,
+      "issues": [
+        "wrong_value(4500_expected_2000-2800)"
+      ],
+      "value": 4500,
+      "raw": "{\"color_temp_kelvin\": 4500, \"reason\": \"Since it is 3 AM (early morning), I am setting a cool white color temperature of 4500K to simulate clear daytime lighting despite the partly cloudy weather.\"}"
+    },
+    {
+      "test": "late_night_overcast",
+      "run": 10,
+      "latency_ms": 6936.8,
+      "json_valid": true,
+      "issues": [],
+      "value": 2700,
+      "raw": "{\"color_temp_kelvin\": 2700, \"reason\": \"Since it is early morning (3 AM), the warm white temperature of 2700K is appropriate regardless of the partly cloudy weather.\"}"
+    },
+    {
+      "test": "midnight",
+      "run": 1,
+      "latency_ms": 120010.0,
+      "json_valid": false,
+      "issues": [
+        "json_parse_failed"
+      ],
+      "value": null,
+      "raw": "ERROR: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=120)"
+    },
+    {
+      "test": "midnight",
+      "run": 2,
+      "latency_ms": 12416.6,
+      "json_valid": true,
+      "issues": [],
+      "value": 2500,
+      "raw": "{\n  \"color_temp_kelvin\": 2500,\n  \"reason\": \"The current time is 0:00 (midnight), which falls into the night period (22:00-06:00), and with clear night skies, the color temperature should be in the 2200-2700 Kelvin range as per the color temperature guide.\"\n}"
+    },
+    {
+      "test": "midnight",
+      "run": 3,
+      "latency_ms": 11991.2,
+      "json_valid": true,
+      "issues": [],
+      "value": 2400,
+      "raw": "{\n  \"color_temp_kelvin\": 2400,\n  \"reason\": \"Since it is currently 0:00 (midnight) with clear night conditions, I am setting the light to 2400K which falls within the recommended 2200-2700K range for night/clear-night to create a warm, relaxing ambiance.\"\n}"
+    },
+    {
+      "test": "midnight",
+      "run": 4,
+      "latency_ms": 6574.5,
+      "json_valid": true,
+      "issues": [],
+      "value": 2400,
+      "raw": "{\"color_temp_kelvin\": 2400, \"reason\": \"Night/clear-night conditions require 2200-2700 Kelvin very warm white lighting to create the appropriate nighttime ambiance.\"}"
+    },
+    {
+      "test": "midnight",
+      "run": 5,
+      "latency_ms": 9014.9,
+      "json_valid": true,
+      "issues": [],
+      "value": 2300,
+      "raw": "{\n  \"color_temp_kelvin\": 2300,\n  \"reason\": \"At hour 0 (midnight) on a clear night, the very warm lighting of 2200-2700 Kelvin creates a cozy, intimate atmosphere appropriate for nighttime relaxation.\"\n}"
+    },
+    {
+      "test": "midnight",
+      "run": 6,
+      "latency_ms": 9724.2,
+      "json_valid": true,
+      "issues": [],
+      "value": 2450,
+      "raw": "```json\n{\n  \"color_temp_kelvin\": 2450,\n  \"reason\": \"At hour 0 (midnight) with clear night conditions, the appropriate color temperature is 2200\u20132700 Kelvin, yielding 2450 Kelvin.\"\n}\n```"
+    },
+    {
+      "test": "midnight",
+      "run": 7,
+      "latency_ms": 18432.2,
+      "json_valid": true,
+      "issues": [],
+      "value": 2450,
+      "raw": "```json\n{\n  \"color_temp_kelvin\": 2450,\n  \"reason\": \"At 00:00 hour on a clear night, I'm setting the living room lights to 2450K (warm) as the primary factor is nighttime darkness, which typically requires warmer, dimmer lighting for comfort and relaxation. The clear-night weather condition supports "
+    },
+    {
+      "test": "midnight",
+      "run": 8,
+      "latency_ms": 9524.6,
+      "json_valid": true,
+      "issues": [],
+      "value": 2200,
+      "raw": "```json\n{\n  \"color_temp_kelvin\": 2200,\n  \"reason\": \"The living room should be set to 2200K because it is night time and clear weather requires a very warm color temperature of 2200-2700K.\"\n}\n```"
+    },
+    {
+      "test": "midnight",
+      "run": 9,
+      "latency_ms": 11774.1,
+      "json_valid": true,
+      "issues": [],
+      "value": 2200,
+      "raw": "```json\n{\n  \"color_temp_kelvin\": 2200,\n  \"reason\": \"The current time is 00:00 under clear-night conditions, so I set the color temperature to 2200 Kelvin, which is at the lower end of the recommended 2200-2700 Kelvin range for night conditions.\"\n}\n```"
+    },
+    {
+      "test": "midnight",
+      "run": 10,
+      "latency_ms": 7577.6,
+      "json_valid": true,
+      "issues": [],
+      "value": 2400,
+      "raw": "```json\n{\n  \"color_temp_kelvin\": 2400,\n  \"reason\": \"Setting the light to 2400K (very warm) because it is currently night-time with clear skies.\"\n}\n```"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+services:
+  jarvis-webhook:
+    build: .
+    container_name: jarvis-webhook
+    env_file: .env
+    environment:
+      TZ: America/Denver
+      PYTHONUNBUFFERED: "1"
+      DECISIONS_FILE: /app/data/decisions.jsonl
+    ports:
+      - "5050:5050"
+    volumes:
+      # Persists the decision log across rebuilds. Both services share
+      # the same volume so chat-triggered actions show up in the same
+      # log as automated decisions.
+      - ./data:/app/data
+    restart: unless-stopped
+
+  jarvis-bot:
+    build: .
+    container_name: jarvis-bot
+    env_file: .env
+    environment:
+      TZ: America/Denver
+      PYTHONUNBUFFERED: "1"
+      DECISIONS_FILE: /app/data/decisions.jsonl
+    command: ["python", "jarvis_bot.py"]
+    volumes:
+      - ./data:/app/data
+    restart: unless-stopped

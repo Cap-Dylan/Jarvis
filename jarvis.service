@@ -1,0 +1,16 @@
+[Unit]
+Description=Jarvis Smart Home Agent
+After=network.target
+
+[Service]
+# Replace USER and the WorkingDirectory / ExecStart paths to match
+# wherever you've cloned the repo. The python binary should point at
+# the venv you set up via `pip install -r requirements.txt`.
+User=YOUR_USER
+WorkingDirectory=/home/YOUR_USER/jarvis
+ExecStart=/home/YOUR_USER/jarvis/venv/bin/python webhook.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

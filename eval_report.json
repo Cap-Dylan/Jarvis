@@ -1,0 +1,1606 @@
+{
+  "timestamp": "2026-04-09T15:45:59.398920",
+  "config": {
+    "ollama_url": "http://localhost:11434",
+    "model_a": "llama3.2:3b",
+    "model_b": "qwen2.5:1.5b",
+    "runs_per_test": 3
+  },
+  "color_temp": [
+    {
+      "test": "morning_sunny",
+      "model": "a",
+      "model_name": "llama3.2:3b",
+      "run": 1,
+      "latency_ms": 2376.7,
+      "json_valid": true,
+      "issues": [],
+      "parsed": {
+        "color_temp_kelvin": 4500,
+        "reason": "a bright and comfortable setting for a sunny morning"
+      },
+      "raw": "{\"color_temp_kelvin\": 4500, \"reason\": \"a bright and comfortable setting for a sunny morning\"}"
+    },
+    {
+      "test": "morning_sunny",
+      "model": "a",
+      "model_name": "llama3.2:3b",
+      "run": 2,
+      "latency_ms": 681.1,
+      "json_valid": true,
+      "issues": [],
+      "parsed": {
+        "color_temp_kelvin": 4500,
+        "reason": "It is daytime and sunny outside."
+      },
+      "raw": "{\"color_temp_kelvin\": 4500, \"reason\": \"It is daytime and sunny outside.\"}"
+    },
+    {
+      "test": "morning_sunny",
+      "model": "a",
+      "model_name": "llama3.2:3b",
+      "run": 3,
+      "latency_ms": 752.4,
+      "json_valid": true,
+      "issues": [],
+      "parsed": {
+        "color_temp_kelvin": 4500,
+        "reason": "a sunny morning requires a cool white light to enhance visibility and atmosphere"
+      },
+      "raw": "{\"color_temp_kelvin\": 4500, \"reason\": \"a sunny morning requires a cool white light to enhance visibility and atmosphere\"}"
+    },
+    {
+      "test": "morning_sunny",
+      "model": "b",
+      "model_name": "qwen2.5:1.5b",
+      "run": 1,
+      "latency_ms": 643.8,
+      "json_valid": true,
+      "issues": [],
+      "parsed": {
+        "color_temp_kelvin": 3000,
+        "reason": "Evening transition from warm to very warm color temperature."
+      },
+      "raw": "{\n  \"color_temp_kelvin\": 3000,\n  \"reason\": \"Evening transition from warm to very warm color temperature.\"\n}"
+    },
+    {
+      "test": "morning_sunny",
+      "model": "b",
+      "model_name": "qwen2.5:1.5b",
+      "run": 2,
+      "latency_ms": 584.5,
+      "json_valid": false,
+      "issues": [
+        "json_parse_failed"
+      ],
+      "parsed": null,
+      "raw": "{\n    \"color_temp_kelvin\": 4000-5000,\n    \"reason\": \"It is currently a clear/sunny daytime.\"\n}"
+    },
+    {
+      "test": "morning_sunny",
+      "model": "b",
+      "model_name": "qwen2.5:1.5b",
+      "run": 3,
+      "latency_ms": 734.8,
+      "json_valid": true,
+      "issues": [
+        "color_temp_not_numeric"
+      ],
+      "parsed": {
+        "color_temp_kelvin": "4000-5000",
+        "reason": "It is the color temperature guide for clear/sunny daytime, which is typically set at 4000-5000 Kelvin to provide a cool white light."
+      },
+      "raw": "{\n  \"color_temp_kelvin\": \"4000-5000\",\n  \"reason\": \"It is the color temperature guide for clear/sunny daytime, which is typically set at 4000-5000 Kelvin to provide a cool white light.\"\n}"
+    },
+    {
+      "test": "midday_cloudy",
+      "model": "a",
+      "model_name": "llama3.2:3b",
+      "run": 1,
+      "latency_ms": 719.3,
+      "json_valid": true,
+      "issues": [],
+      "parsed": {
+        "color_temp_kelvin": 2700,
+        "reason": "It is overcast and cloudy outside, requiring a warmer white light to provide comfort."
+      },
+      "raw": "{\"color_temp_kelvin\": 2700, \"reason\": \"It is overcast and cloudy outside, requiring a warmer white light to provide comfort.\"}"
+    },
+    {
+      "test": "midday_cloudy",
+      "model": "a",
+      "model_name": "llama3.2:3b",
+      "run": 2,
+      "latency_ms": 591.6,
+      "json_valid": true,
+      "issues": [],
+      "parsed": {
+        "color_temp_kelvin": 2800,
+        "reason": "the cloudy weather calls for a warm white light temperature"
+      },
+      "raw": "{\"color_temp_kelvin\": 2800, \"reason\": \"the cloudy weather calls for a warm white light temperature\"}"
+    },
+    {
+      "test": "midday_cloudy",
+      "model": "a",
+      "model_name": "llama3.2:3b",
+      "run": 3,
+      "latency_ms": 672.7,
+      "json_valid": true,
+      "issues": [],
+      "parsed": {
+        "color_temp_kelvin": 2800,
+        "reason": "The cloudy weather requires a warmer white light to create a cozy atmosphere."
+      },
+      "raw": "{\"color_temp_kelvin\": 2800, \"reason\": \"The cloudy weather requires a warmer white light to create a cozy atmosphere.\"}"
+    },
+    {
+      "test": "midday_cloudy",
+      "model": "b",
+      "model_name": "qwen2.5:1.5b",
+      "run": 1,
+      "latency_ms": 686.4,
+      "json_valid": true,
+      "issues": [
+        "color_temp_not_numeric"
+      ],
+      "parsed": {
+        "color_temp_kelvin": "2200-2700 Kelvin",
+        "reason": "Currently in the evening, transitioning to the night, with a gentle shift towards warmer tones."
+      },
+      "raw": "{\n    \"color_temp_kelvin\": \"2200-2700 Kelvin\",\n    \"reason\": \"Currently in the evening, transitioning to the night, with a gentle shift towards warmer tones.\"\n}"
+    },
+    {
+      "test": "midday_cloudy",
+      "model": "b",
+      "model_name": "qwen2.5:1.5b",
+      "run": 2,
+      "latency_ms": 769.0,
+      "json_valid": true,
+      "issues": [],
+      "parsed": {
+        "color_temp_kelvin": 2000,
+        "reason": "The current hour (10 AM) and weather condition of a cloudy day fall into the evening category, where the color temperature range is 2500-3000 Kelvin."
+      },
+      "raw": "{\n    \"color_temp_kelvin\": 2000,\n    \"reason\": \"The current hour (10 AM) and weather condition of a cloudy day fall into the evening category, where the color temperature range is 2500-3000 Kelvin.\"\n}"
+    },
+    {
+      "test": "midday_cloudy",
+      "model": "b",
+      "model_name": "qwen2.5:1.5b",
+      "run": 3,
+      "latency_ms": 840.4,
+      "json_valid": false,
+      "issues": [
+        "json_parse_failed"
+      ],
+      "parsed": null,
+      "raw": "{\n    \"color_temp_kelvin\": 4000-5000,\n    \"reason\": \"The current hour is 10 PM, indicating an evening when the color temperature should be in the warm range.\"\n}"
+    },
+    {
+      "test": "afternoon_rainy",
+      "model": "a",
+      "model_name": "llama3.2:3b",
+      "run": 1,
+      "latency_ms": 995.8,
+      "json_valid": true,
+      "issues": [],
+      "parsed": {
+        "color_temp_kelvin": 2800,
+        "reason": "since it is overcast and rainy outside, the warm white light temperature of 2800 Kelvin is chosen to create a cozy ambiance in the room."
+      },
+      "raw": "{\"color_temp_kelvin\": 2800, \"reason\": \"since it is overcast and rainy outside, the warm white light temperature of 2800 Kelvin is chosen to create a cozy ambiance in the room.\"}"
+    },
+    {
+      "test": "afternoon_rainy",
+      "model": "a",
+      "model_name": "llama3.2:3b",
+      "run": 2,
+      "latency_ms": 641.5,
+      "json_valid": true,
+      "issues": [],
+      "parsed": {
+        "color_temp_kelvin": 2800,
+        "reason": "The rainy weather requires a warmer color temperature for ambiance."
+      },
+      "raw": "{\"color_temp_kelvin\": 2800, \"reason\": \"The rainy weather requires a warmer color temperature for ambiance.\"}"
+    },
+    {
+      "test": "afternoon_rainy",
+      "model": "a",
+      "model_name": "llama3.2:3b",
+      "run": 3,
+      "latency_ms": 716.0,
+      "json_valid": true,
+      "issues": [],
+      "parsed": {
+        "color_temp_kelvin": 2800,
+        "reason": "A rainy day calls for a warm white color temperature to create a cozy ambiance."
+      },
+      "raw": "{\"color_temp_kelvin\": 2800, \"reason\": \"A rainy day calls for a warm white color temperature to create a cozy ambiance.\"}"
+    },
+    {
+      "test": "afternoon_rainy",
+      "model": "b",
+      "model_name": "qwen2.5:1.5b",
+      "run": 1,
+      "latency_ms": 717.8,
+      "json_valid": false,
+      "issues": [
+        "json_parse_failed"
+      ],
+      "parsed": null,
+      "raw": "{\n    \"color_temp_kelvin\": 2000-6500,\n    \"reason\": \"current hour is 14 (evening) and current weather is rainy\"\n}"
+    },
+    {
+      "test": "afternoon_rainy",
+      "model": "b",
+      "model_name": "qwen2.5:1.5b",
+      "run": 2,
+      "latency_ms": 642.6,
+      "json_valid": false,
+      "issues": [
+        "json_parse_failed"
+      ],
+      "parsed": null,
+      "raw": "{\n  \"color_temp_kelvin\": 2000-6500,\n  \"reason\": \"Current hour is 14, which is after noon and before sunset. The weather is rainy.\"\n}"
+    },
+    {
+      "test": "afternoon_rainy",
+      "model": "b",
+      "model_name": "qwen2.5:1.5b",
+      "run": 3,
+      "latency_ms": 891.9,
+      "json_valid": false,
+      "issues": [
+        "json_parse_failed"
+      ],
+      "parsed": null,
+      "raw": "{\n  \"color_temp_kelvin\": 2000-6500,\n  \"reason\": \"The current hour is 14 (4 PM), and the weather is rainy. The appropriate color temperature for these conditions is in the range of 2700-3200 Kelvin, which falls under 'Overcast/rainy'.\"\n}"
+    },
+    {
+      "test": "evening_clear",
+      "model": "a",
+      "model_name": "llama3.2:3b",
+      "run": 1,
+      "latency_ms": 818.4,
+      "json_valid": true,
+      "issues": [],
+      "parsed": {
+        "color_temp_kelvin": 4400,
+        "reason": "The evening hour requires a color temperature within the range of 2500-3000 Kelvin (warm)"
+      },
+      "raw": "{\"color_temp_kelvin\": 4400, \"reason\": \"The evening hour requires a color temperature within the range of 2500-3000 Kelvin (warm)\"}"
+    },
+    {
+      "test": "evening_clear",
+      "model": "a",
+      "model_name": "llama3.2:3b",
+      "run": 2,
+      "latency_ms": 614.4,
+      "json_valid": true,
+      "issues": [],
+      "parsed": {
+        "color_temp_kelvin": 4500,
+        "reason": "It is late evening on a clear day."
+      },
+      "raw": "{\"color_temp_kelvin\": 4500, \"reason\": \"It is late evening on a clear day.\"}"
+    },
+    {
+      "test": "evening_clear",
+      "model": "a",
+      "model_name": "llama3.2:3b",
+      "run": 3,
+      "latency_ms": 616.6,
+      "json_valid": true,
+      "issues": [],
+      "parsed": {
+        "color_temp_kelvin": 4000,
+        "reason": "It's a clear evening hour."
+      },
+      "raw": "{\"color_temp_kelvin\": 4000, \"reason\": \"It's a clear evening hour.\"}"
+    },
+    {
+      "test": "evening_clear",
+      "model": "b",
+      "model_name": "qwen2.5:1.5b",
+      "run": 1,
+      "latency_ms": 610.5,
+      "json_valid": false,
+      "issues": [
+        "json_parse_failed"
+      ],
+      "parsed": null,
+      "raw": "{\"color_temp_kelvin\": 4000-5000, \"reason\": \"clear daytime\"}"
+    },
+    {
+      "test": "evening_clear",
+      "model": "b",
+      "model_name": "qwen2.5:1.5b",
+      "run": 2,
+      "latency_ms": 895.8,
+      "json_valid": false,
+      "issues": [
+        "json_parse_failed"
+      ],
+      "parsed": null,
+      "raw": "{\n  \"color_temp_kelvin\": 2000-3200,\n  \"reason\": \"The current hour is 19, indicating an evening time with clear weather. The light's color temperature falls in the warm white range suitable for night/clear-night.\"\n}"
+    },
+    {
+      "test": "evening_clear",
+      "model": "b",
+      "model_name": "qwen2.5:1.5b",
+      "run": 3,
+      "latency_ms": 638.9,
+      "json_valid": true,
+      "issues": [
+        "color_temp_not_numeric"
+      ],
+      "parsed": {
+        "color_temp_kelvin": "4000-5000",
+        "reason": "The room is currently in the early evening with clear skies."
+      },
+      "raw": "{\n    \"color_temp_kelvin\": \"4000-5000\",\n    \"reason\": \"The room is currently in the early evening with clear skies.\"\n}"
+    },
+    {
+      "test": "night_clear",
+      "model": "a",
+      "model_name": "llama3.2:3b",
+      "run": 1,
+      "latency_ms": 820.7,
+      "json_valid": true,
+      "issues": [],
+      "parsed": {
+        "color_temp_kelvin": 2600,
+        "reason": "The time is late and the weather is clear-night, so a warm but not too bright color temperature is suitable."
+      },
+      "raw": "{\"color_temp_kelvin\": 2600, \"reason\": \"The time is late and the weather is clear-night, so a warm but not too bright color temperature is suitable.\"}"
+    },
+    {
+      "test": "night_clear",
+      "model": "a",
+      "model_name": "llama3.2:3b",
+      "run": 2,
+      "latency_ms": 714.3,
+      "json_valid": true,
+      "issues": [],
+      "parsed": {
+        "color_temp_kelvin": 2500,
+        "reason": "The time is evening, so the color temperature should be adjusted to provide a warm ambiance."
+      },
+      "raw": "{\"color_temp_kelvin\": 2500, \"reason\": \"The time is evening, so the color temperature should be adjusted to provide a warm ambiance.\"}"
+    },
+    {
+      "test": "night_clear",
+      "model": "a",
+      "model_name": "llama3.2:3b",
+      "run": 3,
+      "latency_ms": 717.4,
+      "json_valid": true,
+      "issues": [],
+      "parsed": {
+        "color_temp_kelvin": 2300,
+        "reason": "indicating it's almost night, but not quite dark enough to drop further."
+      },
+      "raw": "{\"color_temp_kelvin\": 2300, \"reason\": \"indicating it's almost night, but not quite dark enough to drop further.\"}"
+    },
+    {
+      "test": "night_clear",
+      "model": "b",
+      "model_name": "qwen2.5:1.5b",
+      "run": 1,
+      "latency_ms": 819.4,
+      "json_valid": true,
+      "issues": [
+        "color_temp_not_numeric"
+      ],
+      "parsed": {
+        "color_temp_kelvin": "2200-2700",
+        "reason": "The current hour is 23 (morning), and the weather is clear-night, so the color temperature should be set to very warm."
+      },
+      "raw": "{\n  \"color_temp_kelvin\": \"2200-2700\",\n  \"reason\": \"The current hour is 23 (morning), and the weather is clear-night, so the color temperature should be set to very warm.\"\n}"
+    },
+    {
+      "test": "night_clear",
+      "model": "b",
+      "model_name": "qwen2.5:1.5b",
+      "run": 2,
+      "latency_ms": 831.2,
+      "json_valid": true,
+      "issues": [
+        "color_temp_not_numeric"
+      ],
+      "parsed": {
+        "color_temp_kelvin": "2000-6500",
+        "reason": "The living room is currently in the evening, with clear sky conditions and a gentle breeze. The ideal color temperature for such an ambiance would be in the range of 2500-3000 Kelvin (warm)."
+      },
+      "raw": "{\n  \"color_temp_kelvin\": \"2000-6500\",\n  \"reason\": \"The living room is currently in the evening, with clear sky conditions and a gentle breeze. The ideal color temperature for such an ambiance would be in the range of 2500-3000 Kelvin (warm).\"\n}"
+    },
+    {
+      "test": "night_clear",
+      "model": "b",
+      "model_name": "qwen2.5:1.5b",
+      "run": 3,
+      "latency_ms": 789.9,
+      "json_valid": true,
+      "issues": [
+        "color_temp_not_numeric"
+      ],
+      "parsed": {
+        "color_temp_kelvin": "2000-6500",
+        "reason": "The current hour is the evening (17:00), and the weather is clear-night. The recommended color temperature for this condition is between 2200-2700 Kelvin."
+      },
+      "raw": "{\n  \"color_temp_kelvin\": \"2000-6500\",\n  \"reason\": \"The current hour is the evening (17:00), and the weather is clear-night. The recommended color temperature for this condition is between 2200-2700 Kelvin.\"\n}"
+    },
+    {
+      "test": "late_night_overcast",
+      "model": "a",
+      "model_name": "llama3.2:3b",
+      "run": 1,
+      "latency_ms": 629.0,
+      "json_valid": true,
+      "issues": [],
+      "parsed": {
+        "color_temp_kelvin": 3500,
+        "reason": "Early morning light on a partly cloudy day"
+      },
+      "raw": "{\"color_temp_kelvin\": 3500, \"reason\": \"Early morning light on a partly cloudy day\"}"
+    },
+    {
+      "test": "late_night_overcast",
+      "model": "a",
+      "model_name": "llama3.2:3b",
+      "run": 2,
+      "latency_ms": 718.0,
+      "json_valid": true,
+      "issues": [],
+      "parsed": {
+        "color_temp_kelvin": 2800,
+        "reason": "Partly cloudy weather warrants a moderate warmth to simulate daytime brightness without being too harsh."
+      },
+      "raw": "{\"color_temp_kelvin\": 2800, \"reason\": \"Partly cloudy weather warrants a moderate warmth to simulate daytime brightness without being too harsh.\"}"
+    },
+    {
+      "test": "late_night_overcast",
+      "model": "a",
+      "model_name": "llama3.2:3b",
+      "run": 3,
+      "latency_ms": 789.0,
+      "json_valid": true,
+      "issues": [],
+      "parsed": {
+        "color_temp_kelvin": 3200,
+        "reason": "partly cloudy weather warrants a balanced color temperature between cool and warm white."
+      },
+      "raw": "{\"color_temp_kelvin\": 3200, \"reason\": \"partly cloudy weather warrants a balanced color temperature between cool and warm white.\"}"
+    },
+    {
+      "test": "late_night_overcast",
+      "model": "b",
+      "model_name": "qwen2.5:1.5b",
+      "run": 1,
+      "latency_ms": 786.8,
+      "json_valid": true,
+      "issues": [
+        "color_temp_not_numeric"
+      ],
+      "parsed": {
+        "color_temp_kelvin": "4000-5000",
+        "reason": "It's partly cloudy outside, which is transitional between overcast and clear daylight. The light quality falls within the cool white range of 4000-5000 Kelvin."
+      },
+      "raw": "{\n    \"color_temp_kelvin\": \"4000-5000\",\n    \"reason\": \"It's partly cloudy outside, which is transitional between overcast and clear daylight. The light quality falls within the cool white range of 4000-5000 Kelvin.\"\n}"
+    },
+    {
+      "test": "late_night_overcast",
+      "model": "b",
+      "model_name": "qwen2.5:1.5b",
+      "run": 2,
+      "latency_ms": 1494.6,
+      "json_valid": true,
+      "issues": [
+        "color_temp_not_numeric"
+      ],
+      "parsed": {
+        "color_temp_kelvin": "2000-6500",
+        "reason": "The living room light should be set to a color temperature between 4000 and 5000 Kelvin during clear/sunny daytime or overcast/rainy weather, as this range is typically recommended for cool white settings. During evening hours when the sun sets, it's appropriate to adjust the light to a warm white setting with temperatures ranging from 2500 to 3000 Kelvin. For nighttime and clear night conditions, the light should be set to very warm with temperatures between 2200 and 2700 Kelvin."
+      },
+      "raw": "{\n  \"color_temp_kelvin\": \"2000-6500\",\n  \"reason\": \"The living room light should be set to a color temperature between 4000 and 5000 Kelvin during clear/sunny daytime or overcast/rainy weather, as this range is typically recommended for cool white settings. During evening hours when the sun sets, it's appropriate to adjust the light to a warm white setting with temperatures ranging from 2500 to 3000 Kelvin. For nighttime and clear night conditions, the light should be set to very warm with temper"
+    },
+    {
+      "test": "late_night_overcast",
+      "model": "b",
+      "model_name": "qwen2.5:1.5b",
+      "run": 3,
+      "latency_ms": 716.0,
+      "json_valid": true,
+      "issues": [
+        "color_temp_not_numeric"
+      ],
+      "parsed": {
+        "color_temp_kelvin": "4000-5000",
+        "reason": "It is currently partly cloudy with a clear sky outside. The color temperature should be set to the range for clear/sunny daytime."
+      },
+      "raw": "{\n  \"color_temp_kelvin\": \"4000-5000\",\n  \"reason\": \"It is currently partly cloudy with a clear sky outside. The color temperature should be set to the range for clear/sunny daytime.\"\n}"
+    },
+    {
+      "test": "noon_fog",
+      "model": "a",
+      "model_name": "llama3.2:3b",
+      "run": 1,
+      "latency_ms": 755.8,
+      "json_valid": true,
+      "issues": [],
+      "parsed": {
+        "color_temp_kelvin": 3000,
+        "reason": "a balance between warm and cool light suitable for overcast conditions like foggy weather."
+      },
+      "raw": "{\"color_temp_kelvin\": 3000, \"reason\": \"a balance between warm and cool light suitable for overcast conditions like foggy weather.\"}"
+    },
+    {
+      "test": "noon_fog",
+      "model": "a",
+      "model_name": "llama3.2:3b",
+      "run": 2,
+      "latency_ms": 772.4,
+      "json_valid": true,
+      "issues": [],
+      "parsed": {
+        "color_temp_kelvin": 2500,
+        "reason": "It's evening and the foggy weather suggests it's still daytime."
+      },
+      "raw": "{\"color_temp_kelvin\": 2500, \"reason\": \"It's evening and the foggy weather suggests it's still daytime.\"}"
+    },
+    {
+      "test": "noon_fog",
+      "model": "a",
+      "model_name": "llama3.2:3b",
+      "run": 3,
+      "latency_ms": 826.0,
+      "json_valid": true,
+      "issues": [],
+      "parsed": {
+        "color_temp_kelvin": 2900,
+        "reason": "The cool white color temperature is suitable for the daytime and clear conditions."
+      },
+      "raw": "{\"color_temp_kelvin\": 2900, \"reason\": \"The cool white color temperature is suitable for the daytime and clear conditions.\"}"
+    },
+    {
+      "test": "noon_fog",
+      "model": "b",
+      "model_name": "qwen2.5:1.5b",
+      "run": 1,
+      "latency_ms": 920.8,
+      "json_valid": false,
+      "issues": [
+        "json_parse_failed"
+      ],
+      "parsed": null,
+      "raw": "{\n  \"color_temp_kelvin\": 4000-5000,\n  \"reason\": \"It's currently foggy outside with a low visibility. The color temperature for overcast/rainy conditions is recommended to create an atmosphere conducive to comfortable indoor spaces and protect against harsh light sources.\"\n}"
+    },
+    {
+      "test": "noon_fog",
+      "model": "b",
+      "model_name": "qwen2.5:1.5b",
+      "run": 2,
+      "latency_ms": 820.0,
+      "json_valid": false,
+      "issues": [
+        "json_parse_failed"
+      ],
+      "parsed": null,
+      "raw": "{\n    \"color_temp_kelvin\": 4000-5000,\n    \"reason\": \"Current hour is 12 (evening) and the current weather is fog. This combination suggests a warm white light setting.\"\n}"
+    },
+    {
+      "test": "noon_fog",
+      "model": "b",
+      "model_name": "qwen2.5:1.5b",
+      "run": 3,
+      "latency_ms": 716.2,
+      "json_valid": false,
+      "issues": [
+        "json_parse_failed"
+      ],
+      "parsed": null,
+      "raw": "{\n    \"color_temp_kelvin\": 4000-5000,\n    \"reason\": \"foggy conditions result in a mixture of cloudy and nighttime lighting effects\"\n}"
+    },
+    {
+      "test": "evening_snow",
+      "model": "a",
+      "model_name": "llama3.2:3b",
+      "run": 1,
+      "latency_ms": 819.8,
+      "json_valid": true,
+      "issues": [],
+      "parsed": {
+        "color_temp_kelvin": 2800,
+        "reason": "a soothing ambiance is needed for the snowy evening to provide comfort and warmth without being too harsh."
+      },
+      "raw": "{\"color_temp_kelvin\": 2800, \"reason\": \"a soothing ambiance is needed for the snowy evening to provide comfort and warmth without being too harsh.\"}"
+    },
+    {
+      "test": "evening_snow",
+      "model": "a",
+      "model_name": "llama3.2:3b",
+      "run": 2,
+      "latency_ms": 600.2,
+      "json_valid": true,
+      "issues": [],
+      "parsed": {
+        "color_temp_kelvin": 3000,
+        "reason": "To provide a balance between comfort and the snowy conditions."
+      },
+      "raw": "{\"color_temp_kelvin\": 3000, \"reason\": \"To provide a balance between comfort and the snowy conditions.\"}"
+    },
+    {
+      "test": "evening_snow",
+      "model": "a",
+      "model_name": "llama3.2:3b",
+      "run": 3,
+      "latency_ms": 728.7,
+      "json_valid": true,
+      "issues": [],
+      "parsed": {
+        "color_temp_kelvin": 2800,
+        "reason": "A soothing ambiance to match the snowy weather."
+      },
+      "raw": "{\"color_temp_kelvin\": 2800, \"reason\": \"A soothing ambiance to match the snowy weather.\"}"
+    },
+    {
+      "test": "evening_snow",
+      "model": "b",
+      "model_name": "qwen2.5:1.5b",
+      "run": 1,
+      "latency_ms": 660.2,
+      "json_valid": false,
+      "issues": [
+        "json_parse_failed"
+      ],
+      "parsed": null,
+      "raw": "{\n  \"color_temp_kelvin\": 2000-6500,\n  \"reason\": \"The current hour is 20 (evening), and the weather is snowy.\"\n}"
+    },
+    {
+      "test": "evening_snow",
+      "model": "b",
+      "model_name": "qwen2.5:1.5b",
+      "run": 2,
+      "latency_ms": 772.9,
+      "json_valid": true,
+      "issues": [
+        "color_temp_not_numeric"
+      ],
+      "parsed": {
+        "color_temp_kelvin": "4000-5000",
+        "reason": "Current hour (20) is the evening, so it falls under a warm light temperature."
+      },
+      "raw": "{\n    \"color_temp_kelvin\": \"4000-5000\",\n    \"reason\": \"Current hour (20) is the evening, so it falls under a warm light temperature.\"\n}"
+    },
+    {
+      "test": "evening_snow",
+      "model": "b",
+      "model_name": "qwen2.5:1.5b",
+      "run": 3,
+      "latency_ms": 819.1,
+      "json_valid": false,
+      "issues": [
+        "json_parse_failed"
+      ],
+      "parsed": null,
+      "raw": "{\n  \"color_temp_kelvin\": 4000-5000,\n  \"reason\": \"It's currently a snowy night, falling in the evening. The color temperature should reflect the twilight and early evening, making it between cool white and warm white.\"\n}"
+    }
+  ],
+  "bot": [
+    {
+      "test": "cmd_turn_on",
+      "model": "a",
+      "model_name": "llama3.2:3b",
+      "run": 1,
+      "latency_ms": 1125.2,
+      "json_valid": true,
+      "issues": [],
+      "parsed": {
+        "response": "The living room light is now on. Brightness is set at 150, a comfortable level for an evening",
+        "actions": [
+          {
+            "action": "turn_on",
+            "entity": "living room light",
+            "brightness": 150
+          }
+        ]
+      },
+      "raw": "{\"response\": \"The living room light is now on. Brightness is set at 150, a comfortable level for an evening\", \"actions\":[{\"action\":\"turn_on\",\"entity\":\"living room light\",\"brightness\":150}]}"
+    },
+    {
+      "test": "cmd_turn_on",
+      "model": "a",
+      "model_name": "llama3.2:3b",
+      "run": 2,
+      "latency_ms": 919.8,
+      "json_valid": true,
+      "issues": [],
+      "parsed": {
+        "response": "The living room light is now on.",
+        "actions": [
+          {
+            "action": "turn_on",
+            "entity": "living room light"
+          }
+        ]
+      },
+      "raw": "{\"response\": \"The living room light is now on.\", \"actions\":[{\"action\": \"turn_on\", \"entity\": \"living room light\"}]}"
+    },
+    {
+      "test": "cmd_turn_on",
+      "model": "a",
+      "model_name": "llama3.2:3b",
+      "run": 3,
+      "latency_ms": 806.2,
+      "json_valid": true,
+      "issues": [],
+      "parsed": {
+        "response": "The living room light is coming on now.",
+        "actions": [
+          {
+            "action": "turn_on",
+            "entity": "living room light",
+            "brightness": 255
+          }
+        ]
+      },
+      "raw": "{\"response\": \"The living room light is coming on now.\", \"actions\":[{\"action\": \"turn_on\", \"entity\": \"living room light\", \"brightness\": 255}]}"
+    },
+    {
+      "test": "cmd_turn_on",
+      "model": "b",
+      "model_name": "qwen2.5:1.5b",
+      "run": 1,
+      "latency_ms": 626.4,
+      "json_valid": true,
+      "issues": [],
+      "parsed": {
+        "response": "Sure, I'll turn on the living room light.",
+        "actions": [
+          {
+            "action": "turn_on",
+            "entity": "living room light",
+            "brightness": 255
+          }
+        ]
+      },
+      "raw": "{\"response\": \"Sure, I'll turn on the living room light.\", \"actions\": [{\"action\": \"turn_on\", \"entity\": \"living room light\", \"brightness\": 255}]}"
+    },
+    {
+      "test": "cmd_turn_on",
+      "model": "b",
+      "model_name": "qwen2.5:1.5b",
+      "run": 2,
+      "latency_ms": 572.2,
+      "json_valid": true,
+      "issues": [],
+      "parsed": {
+        "response": "Got it. Turning on the living room light.",
+        "actions": [
+          {
+            "action": "turn_on",
+            "entity": "living room light"
+          }
+        ]
+      },
+      "raw": "{\"response\": \"Got it. Turning on the living room light.\", \"actions\": [{\"action\": \"turn_on\", \"entity\": \"living room light\"}]}"
+    },
+    {
+      "test": "cmd_turn_on",
+      "model": "b",
+      "model_name": "qwen2.5:1.5b",
+      "run": 3,
+      "latency_ms": 657.8,
+      "json_valid": true,
+      "issues": [],
+      "parsed": {
+        "response": "Sure! I'll turn on the living room light.",
+        "actions": [
+          {
+            "action": "turn_on",
+            "entity": "living room light"
+          }
+        ]
+      },
+      "raw": "{\"response\": \"Sure! I'll turn on the living room light.\", \"actions\": [{\"action\": \"turn_on\", \"entity\": \"living room light\"}]}"
+    },
+    {
+      "test": "cmd_turn_off_slang",
+      "model": "a",
+      "model_name": "llama3.2:3b",
+      "run": 1,
+      "latency_ms": 795.2,
+      "json_valid": true,
+      "issues": [],
+      "parsed": {
+        "response": "The living room light is now off.",
+        "actions": [
+          {
+            "action": "turn_off",
+            "entity": "living room light"
+          }
+        ]
+      },
+      "raw": "{\"response\": \"The living room light is now off.\", \"actions\": [{\"action\": \"turn_off\", \"entity\": \"living room light\"}]}"
+    },
+    {
+      "test": "cmd_turn_off_slang",
+      "model": "a",
+      "model_name": "llama3.2:3b",
+      "run": 2,
+      "latency_ms": 847.4,
+      "json_valid": true,
+      "issues": [],
+      "parsed": {
+        "response": "The living room light is now off.",
+        "actions": [
+          {
+            "action": "turn_off",
+            "entity": "living room light"
+          }
+        ]
+      },
+      "raw": "{\"response\": \"The living room light is now off.\", \"actions\": [{\"action\": \"turn_off\", \"entity\": \"living room light\"}]}"
+    },
+    {
+      "test": "cmd_turn_off_slang",
+      "model": "a",
+      "model_name": "llama3.2:3b",
+      "run": 3,
+      "latency_ms": 920.3,
+      "json_valid": true,
+      "issues": [],
+      "parsed": {
+        "response": "The living room light is turning off. The time is now 23:01.",
+        "actions": [
+          {
+            "action": "turn_off",
+            "entity": "living room light"
+          }
+        ]
+      },
+      "raw": "{\"response\": \"The living room light is turning off. The time is now 23:01.\", \"actions\":[{\"action\": \"turn_off\", \"entity\": \"living room light\"}]}"
+    },
+    {
+      "test": "cmd_turn_off_slang",
+      "model": "b",
+      "model_name": "qwen2.5:1.5b",
+      "run": 1,
+      "latency_ms": 712.3,
+      "json_valid": true,
+      "issues": [],
+      "parsed": {
+        "response": "Understood. I will turn off the living room light.",
+        "actions": [
+          {
+            "action": "turn_off",
+            "entity": "living room light"
+          }
+        ]
+      },
+      "raw": "{\"response\": \"Understood. I will turn off the living room light.\", \"actions\": [{\"action\": \"turn_off\", \"entity\": \"living room light\"}]}"
+    },
+    {
+      "test": "cmd_turn_off_slang",
+      "model": "b",
+      "model_name": "qwen2.5:1.5b",
+      "run": 2,
+      "latency_ms": 616.2,
+      "json_valid": true,
+      "issues": [],
+      "parsed": {
+        "response": "Turning off the living room light.",
+        "actions": [
+          {
+            "action": "turn_off",
+            "entity": "living room light"
+          }
+        ]
+      },
+      "raw": "{\"response\": \"Turning off the living room light.\", \"actions\": [{\"action\": \"turn_off\", \"entity\": \"living room light\"}]}"
+    },
+    {
+      "test": "cmd_turn_off_slang",
+      "model": "b",
+      "model_name": "qwen2.5:1.5b",
+      "run": 3,
+      "latency_ms": 611.4,
+      "json_valid": true,
+      "issues": [
+        "expected_action_but_none"
+      ],
+      "parsed": {
+        "response": "Sorry, I can't turn off your lights. They are all on.",
+        "actions": []
+      },
+      "raw": "{\"response\": \"Sorry, I can't turn off your lights. They are all on.\", \"actions\": []}"
+    },
+    {
+      "test": "cmd_brightness_pct",
+      "model": "a",
+      "model_name": "llama3.2:3b",
+      "run": 1,
+      "latency_ms": 1148.6,
+      "json_valid": true,
+      "issues": [],
+      "parsed": {
+        "response": "The lab light is now at 50% brightness. I've adjusted the setting to provide sufficient illumination without overpowering the space.",
+        "actions": [
+          {
+            "action": "turn_on",
+            "entity": "lab light",
+            "brightness": 50
+          }
+        ]
+      },
+      "raw": "{\"response\": \"The lab light is now at 50% brightness. I've adjusted the setting to provide sufficient illumination without overpowering the space.\", \"actions\":[{\"action\":\"turn_on\", \"entity\":\"lab light\", \"brightness\":50}]}"
+    },
+    {
+      "test": "cmd_brightness_pct",
+      "model": "a",
+      "model_name": "llama3.2:3b",
+      "run": 2,
+      "latency_ms": 897.3,
+      "json_valid": true,
+      "issues": [],
+      "parsed": {
+        "response": "Lab light will now be at 50% brightness.",
+        "actions": [
+          {
+            "action": "turn_on",
+            "entity": "lab light",
+            "brightness": 50
+          }
+        ]
+      },
+      "raw": "{\"response\": \"Lab light will now be at 50% brightness.\", \"actions\": [{\"action\": \"turn_on\", \"entity\": \"lab light\", \"brightness\": 50}]}"
+    },
+    {
+      "test": "cmd_brightness_pct",
+      "model": "a",
+      "model_name": "llama3.2:3b",
+      "run": 3,
+      "latency_ms": 921.5,
+      "json_valid": true,
+      "issues": [],
+      "parsed": {
+        "response": "The lab light is now at 50% brightness.",
+        "actions": [
+          {
+            "action": "turn_on",
+            "entity": "lab light",
+            "brightness": 50
+          }
+        ]
+      },
+      "raw": "{\"response\": \"The lab light is now at 50% brightness.\", \"actions\": [{\"action\": \"turn_on\", \"entity\": \"lab light\", \"brightness\": 50}]}"
+    },
+    {
+      "test": "cmd_brightness_pct",
+      "model": "b",
+      "model_name": "qwen2.5:1.5b",
+      "run": 1,
+      "latency_ms": 820.9,
+      "json_valid": true,
+      "issues": [],
+      "parsed": {
+        "response": "Okay, I will turn on the lab light with a brightness of 50.",
+        "actions": [
+          {
+            "action": "turn_on",
+            "entity": "lab light",
+            "brightness": 50
+          }
+        ]
+      },
+      "raw": "{\n  \"response\": \"Okay, I will turn on the lab light with a brightness of 50.\",\n  \"actions\": [{\"action\": \"turn_on\", \"entity\": \"lab light\", \"brightness\": 50}]\n}"
+    },
+    {
+      "test": "cmd_brightness_pct",
+      "model": "b",
+      "model_name": "qwen2.5:1.5b",
+      "run": 2,
+      "latency_ms": 830.8,
+      "json_valid": true,
+      "issues": [],
+      "parsed": {
+        "response": "You've set the lab light brightness to 12.5.",
+        "actions": [
+          {
+            "action": "turn_on",
+            "entity": "lab light",
+            "brightness": 12.5
+          }
+        ]
+      },
+      "raw": "{\n  \"response\": \"You've set the lab light brightness to 12.5.\",\n  \"actions\": [\n    {\n      \"action\": \"turn_on\",\n      \"entity\": \"lab light\",\n      \"brightness\": 12.5\n    }\n  ]\n}"
+    },
+    {
+      "test": "cmd_brightness_pct",
+      "model": "b",
+      "model_name": "qwen2.5:1.5b",
+      "run": 3,
+      "latency_ms": 702.9,
+      "json_valid": true,
+      "issues": [],
+      "parsed": {
+        "response": "The lab light has been set to a brightness of 50%.",
+        "actions": [
+          {
+            "action": "turn_on",
+            "entity": "lab light",
+            "brightness": 50
+          }
+        ]
+      },
+      "raw": "{\n  \"response\": \"The lab light has been set to a brightness of 50%.\",\n  \"actions\": [{\"action\": \"turn_on\", \"entity\": \"lab light\", \"brightness\": 50}]\n}"
+    },
+    {
+      "test": "cmd_multi_entity",
+      "model": "a",
+      "model_name": "llama3.2:3b",
+      "run": 1,
+      "latency_ms": 1434.4,
+      "json_valid": true,
+      "issues": [],
+      "parsed": {
+        "response": "I'll switch on both the living room light and the lab light. That should brighten up your space nicely.",
+        "actions": [
+          {
+            "action": "turn_on",
+            "entity": "living room light",
+            "brightness": 150
+          },
+          {
+            "action": "turn_on",
+            "entity": "lab light",
+            "brightness": 150
+          }
+        ]
+      },
+      "raw": "{\"response\": \"I'll switch on both the living room light and the lab light. That should brighten up your space nicely.\", \"actions\": [{\"action\": \"turn_on\", \"entity\": \"living room light\", \"brightness\": 150}, {\"action\": \"turn_on\", \"entity\": \"lab light\", \"brightness\": 150}]}"
+    },
+    {
+      "test": "cmd_multi_entity",
+      "model": "a",
+      "model_name": "llama3.2:3b",
+      "run": 2,
+      "latency_ms": 1020.4,
+      "json_valid": true,
+      "issues": [],
+      "parsed": {
+        "response": "The living room light will now be turned on at maximum brightness.",
+        "actions": [
+          {
+            "action": "turn_on",
+            "entity": "living room light",
+            "brightness": 255
+          },
+          {
+            "action": "turn_on",
+            "entity": "lab light",
+            "brightness": 255
+          }
+        ]
+      },
+      "raw": "{\"response\": \"The living room light will now be turned on at maximum brightness.\", \"actions\":[{\"action\":\"turn_on\",\"entity\":\"living room light\",\"brightness\":255}, {\"action\":\"turn_on\",\"entity\":\"lab light\", \"brightness\":255}]}"
+    },
+    {
+      "test": "cmd_multi_entity",
+      "model": "a",
+      "model_name": "llama3.2:3b",
+      "run": 3,
+      "latency_ms": 1216.8,
+      "json_valid": true,
+      "issues": [],
+      "parsed": {
+        "response": "I'll turn on both lights. The living room light is now at 255 brightness and the lab light is also turned on with a moderate brightness of 150.",
+        "actions": [
+          {
+            "action": "turn_on",
+            "entity": "living room light"
+          },
+          {
+            "action": "turn_on",
+            "entity": "lab light",
+            "brightness": 150
+          }
+        ]
+      },
+      "raw": "{\"response\": \"I'll turn on both lights. The living room light is now at 255 brightness and the lab light is also turned on with a moderate brightness of 150.\", \"actions\":[{\"action\": \"turn_on\", \"entity\": \"living room light\"}, {\"action\": \"turn_on\", \"entity\": \"lab light\", \"brightness\": 150}]}"
+    },
+    {
+      "test": "cmd_multi_entity",
+      "model": "b",
+      "model_name": "qwen2.5:1.5b",
+      "run": 1,
+      "latency_ms": 1038.1,
+      "json_valid": true,
+      "issues": [],
+      "parsed": {
+        "response": "Goodnight! Turning on both the living room light and lab light.",
+        "actions": [
+          {
+            "action": "turn_on",
+            "entity": "living room light",
+            "brightness": 255
+          },
+          {
+            "action": "turn_on",
+            "entity": "lab light",
+            "brightness": 255
+          }
+        ]
+      },
+      "raw": "{\n  \"response\": \"Goodnight! Turning on both the living room light and lab light.\",\n  \"actions\": [\n    {\"action\": \"turn_on\", \"entity\": \"living room light\", \"brightness\": 255},\n    {\"action\": \"turn_on\", \"entity\": \"lab light\", \"brightness\": 255}\n  ]\n}"
+    },
+    {
+      "test": "cmd_multi_entity",
+      "model": "b",
+      "model_name": "qwen2.5:1.5b",
+      "run": 2,
+      "latency_ms": 1022.1,
+      "json_valid": true,
+      "issues": [],
+      "parsed": {
+        "response": "Good night, I will now turn on both your living room light and lab light to match the evening schedule.",
+        "actions": [
+          {
+            "action": "turn_on",
+            "entity": "living room light",
+            "brightness": 150
+          },
+          {
+            "action": "turn_on",
+            "entity": "lab light",
+            "brightness": 255
+          }
+        ]
+      },
+      "raw": "{\"response\": \"Good night, I will now turn on both your living room light and lab light to match the evening schedule.\", \"actions\": [{\"action\": \"turn_on\", \"entity\": \"living room light\", \"brightness\": 150}, {\"action\": \"turn_on\", \"entity\": \"lab light\", \"brightness\": 255}]}"
+    },
+    {
+      "test": "cmd_multi_entity",
+      "model": "b",
+      "model_name": "qwen2.5:1.5b",
+      "run": 3,
+      "latency_ms": 921.8,
+      "json_valid": true,
+      "issues": [],
+      "parsed": {
+        "response": "Sure, I will turn on both the living room light and the lab light.",
+        "actions": [
+          {
+            "action": "turn_on",
+            "entity": "living room light",
+            "brightness": 255
+          },
+          {
+            "action": "turn_on",
+            "entity": "lab light",
+            "brightness": 255
+          }
+        ]
+      },
+      "raw": "{\"response\": \"Sure, I will turn on both the living room light and the lab light.\", \"actions\": [{\"action\": \"turn_on\", \"entity\": \"living room light\", \"brightness\": 255}, {\"action\": \"turn_on\", \"entity\": \"lab light\", \"brightness\": 255}]}"
+    },
+    {
+      "test": "cmd_vague_dim",
+      "model": "a",
+      "model_name": "llama3.2:3b",
+      "run": 1,
+      "latency_ms": 1022.3,
+      "json_valid": true,
+      "issues": [],
+      "parsed": {
+        "response": "I'll dim the living room light slightly.",
+        "actions": [
+          {
+            "action": "turn_off",
+            "entity": "living room light",
+            "brightness": 0
+          }
+        ]
+      },
+      "raw": "{\"response\": \"I'll dim the living room light slightly.\", \"actions\": [{\"action\": \"turn_off\", \"entity\": \"living room light\", \"brightness\": 0}]}"
+    },
+    {
+      "test": "cmd_vague_dim",
+      "model": "a",
+      "model_name": "llama3.2:3b",
+      "run": 2,
+      "latency_ms": 1025.2,
+      "json_valid": true,
+      "issues": [
+        "action_0_invalid_type(dim)",
+        "action_0_unknown_entity(None)",
+        "action_1_invalid_type(None)"
+      ],
+      "parsed": {
+        "response": "Adjusting the living room light to 110%. The current brightness is now at 90%",
+        "actions": [
+          {
+            "action": "dim",
+            "brightness": 110
+          },
+          {
+            "entity": "living room light"
+          }
+        ]
+      },
+      "raw": "{\"response\": \"Adjusting the living room light to 110%. The current brightness is now at 90%\", \"actions\": [{\"action\": \"dim\", \"brightness\": 110}, {\"entity\": \"living room light\"}]}"
+    },
+    {
+      "test": "cmd_vague_dim",
+      "model": "a",
+      "model_name": "llama3.2:3b",
+      "run": 3,
+      "latency_ms": 1125.6,
+      "json_valid": true,
+      "issues": [
+        "action_0_invalid_type(dim)"
+      ],
+      "parsed": {
+        "response": "I'll reduce the brightness of the living room light by 30 to 150, since it's getting on towards evening.",
+        "actions": [
+          {
+            "action": "dim",
+            "entity": "living room light",
+            "brightness": 150
+          }
+        ]
+      },
+      "raw": "{\"response\": \"I'll reduce the brightness of the living room light by 30 to 150, since it's getting on towards evening.\", \"actions\": [{\"action\": \"dim\", \"entity\": \"living room light\", \"brightness\": 150}]}"
+    },
+    {
+      "test": "cmd_vague_dim",
+      "model": "b",
+      "model_name": "qwen2.5:1.5b",
+      "run": 1,
+      "latency_ms": 951.9,
+      "json_valid": true,
+      "issues": [],
+      "parsed": {
+        "response": "Sure, I'll dim the living room light a bit. It's now at 70% brightness.",
+        "actions": [
+          {
+            "action": "turn_on",
+            "entity": "living room light",
+            "brightness": 140
+          }
+        ]
+      },
+      "raw": "{\n  \"response\": \"Sure, I'll dim the living room light a bit. It's now at 70% brightness.\",\n  \"actions\": [\n    {\n      \"action\": \"turn_on\",\n      \"entity\": \"living room light\",\n      \"brightness\": 140\n    }\n  ]\n}"
+    },
+    {
+      "test": "cmd_vague_dim",
+      "model": "b",
+      "model_name": "qwen2.5:1.5b",
+      "run": 2,
+      "latency_ms": 685.3,
+      "json_valid": true,
+      "issues": [],
+      "parsed": {
+        "response": "The living room light brightness will be reduced by 20%.",
+        "actions": [
+          {
+            "action": "turn_on",
+            "entity": "living room light",
+            "brightness": 56
+          }
+        ]
+      },
+      "raw": "{\"response\": \"The living room light brightness will be reduced by 20%.\", \"actions\": [{\"action\": \"turn_on\", \"entity\": \"living room light\", \"brightness\": 56}]}"
+    },
+    {
+      "test": "cmd_vague_dim",
+      "model": "b",
+      "model_name": "qwen2.5:1.5b",
+      "run": 3,
+      "latency_ms": 921.3,
+      "json_valid": true,
+      "issues": [],
+      "parsed": {
+        "response": "You've requested that I reduce the brightness of the living room light. To accomplish this, I will adjust it to a lower setting.",
+        "actions": [
+          {
+            "action": "turn_on",
+            "entity": "living room light",
+            "brightness": 100
+          }
+        ]
+      },
+      "raw": "{\n  \"response\": \"You've requested that I reduce the brightness of the living room light. To accomplish this, I will adjust it to a lower setting.\",\n  \"actions\": [{\"action\": \"turn_on\", \"entity\": \"living room light\", \"brightness\": 100}]\n}"
+    },
+    {
+      "test": "chat_greeting",
+      "model": "a",
+      "model_name": "llama3.2:3b",
+      "run": 1,
+      "latency_ms": 1023.8,
+      "json_valid": true,
+      "issues": [],
+      "parsed": {
+        "response": "Not much, just getting everything ready for a productive day. It's 10:00 AM, which means the living room light should be nice and bright. The lab is quiet for now.",
+        "actions": []
+      },
+      "raw": "{\"response\": \"Not much, just getting everything ready for a productive day. It's 10:00 AM, which means the living room light should be nice and bright. The lab is quiet for now.\", \"actions\": []}"
+    },
+    {
+      "test": "chat_greeting",
+      "model": "a",
+      "model_name": "llama3.2:3b",
+      "run": 2,
+      "latency_ms": 818.5,
+      "json_valid": true,
+      "issues": [],
+      "parsed": {
+        "response": "Not much, just getting everything ready for the day. The lights in the lab are still off since we closed up at 9 PM last night.",
+        "actions": []
+      },
+      "raw": "{\"response\": \"Not much, just getting everything ready for the day. The lights in the lab are still off since we closed up at 9 PM last night.\", \"actions\": []}"
+    },
+    {
+      "test": "chat_greeting",
+      "model": "a",
+      "model_name": "llama3.2:3b",
+      "run": 3,
+      "latency_ms": 718.2,
+      "json_valid": true,
+      "issues": [],
+      "parsed": {
+        "response": "Not much, just getting everything ready for the day. The lights are set to keep things comfortable.",
+        "actions": []
+      },
+      "raw": "{\"response\": \"Not much, just getting everything ready for the day. The lights are set to keep things comfortable.\", \"actions\": []}"
+    },
+    {
+      "test": "chat_greeting",
+      "model": "b",
+      "model_name": "qwen2.5:1.5b",
+      "run": 1,
+      "latency_ms": 611.8,
+      "json_valid": true,
+      "issues": [],
+      "parsed": {
+        "response": "Nothing special, just a normal day at home.",
+        "actions": []
+      },
+      "raw": "{\"response\": \"Nothing special, just a normal day at home.\", \"actions\": []}"
+    },
+    {
+      "test": "chat_greeting",
+      "model": "b",
+      "model_name": "qwen2.5:1.5b",
+      "run": 2,
+      "latency_ms": 614.4,
+      "json_valid": true,
+      "issues": [],
+      "parsed": {
+        "response": "Nothing much. Just enjoying my morning coffee in the living room.",
+        "actions": []
+      },
+      "raw": "{\"response\": \"Nothing much. Just enjoying my morning coffee in the living room.\", \"actions\": []}"
+    },
+    {
+      "test": "chat_greeting",
+      "model": "b",
+      "model_name": "qwen2.5:1.5b",
+      "run": 3,
+      "latency_ms": 602.2,
+      "json_valid": true,
+      "issues": [],
+      "parsed": {
+        "response": "Nothing much, just enjoying a nice day around here. How about you?",
+        "actions": []
+      },
+      "raw": "{\"response\": \"Nothing much, just enjoying a nice day around here. How about you?\", \"actions\": []}"
+    },
+    {
+      "test": "chat_why_question",
+      "model": "a",
+      "model_name": "llama3.2:3b",
+      "run": 1,
+      "latency_ms": 1240.2,
+      "json_valid": true,
+      "issues": [],
+      "parsed": {
+        "response": "I turned on the light because it's evening and we have clear skies outside. The temperature is warm, making it a lovely evening to spend indoors with some good lighting.",
+        "actions": []
+      },
+      "raw": "{\"response\": \"I turned on the light because it's evening and we have clear skies outside. The temperature is warm, making it a lovely evening to spend indoors with some good lighting.\", \"actions\": []}"
+    },
+    {
+      "test": "chat_why_question",
+      "model": "a",
+      "model_name": "llama3.2:3b",
+      "run": 2,
+      "latency_ms": 917.9,
+      "json_valid": true,
+      "issues": [],
+      "parsed": {
+        "response": "It's evening now, with clear skies, making it a great time to relax and enjoy some quality time. I turned on the living room light to create a warm ambiance.",
+        "actions": []
+      },
+      "raw": "{\"response\": \"It's evening now, with clear skies, making it a great time to relax and enjoy some quality time. I turned on the living room light to create a warm ambiance.\", \"actions\": []}"
+    },
+    {
+      "test": "chat_why_question",
+      "model": "a",
+      "model_name": "llama3.2:3b",
+      "run": 3,
+      "latency_ms": 821.6,
+      "json_valid": true,
+      "issues": [],
+      "parsed": {
+        "response": "I turned on the light because I sensed that you were coming home with clear skies and warm temperatures outside. It's your usual evening routine.",
+        "actions": []
+      },
+      "raw": "{\"response\": \"I turned on the light because I sensed that you were coming home with clear skies and warm temperatures outside. It's your usual evening routine.\", \"actions\": []}"
+    },
+    {
+      "test": "chat_why_question",
+      "model": "b",
+      "model_name": "qwen2.5:1.5b",
+      "run": 1,
+      "latency_ms": 1022.8,
+      "json_valid": true,
+      "issues": [
+        "unexpected_action_produced"
+      ],
+      "parsed": {
+        "response": "Good evening! I turned on the living room light because it was a warm 2800K and I wanted to enjoy the evening with some ambient lighting.",
+        "actions": [
+          {
+            "action": "turn_on",
+            "entity": "living room light",
+            "brightness": 150
+          }
+        ]
+      },
+      "raw": "{\"response\": \"Good evening! I turned on the living room light because it was a warm 2800K and I wanted to enjoy the evening with some ambient lighting.\", \"actions\": [{\"action\": \"turn_on\", \"entity\": \"living room light\", \"brightness\": 150}]}"
+    },
+    {
+      "test": "chat_why_question",
+      "model": "b",
+      "model_name": "qwen2.5:1.5b",
+      "run": 2,
+      "latency_ms": 1027.3,
+      "json_valid": true,
+      "issues": [
+        "unexpected_action_produced"
+      ],
+      "parsed": {
+        "response": "I turned on the living room light because there was a person detected around 20:45 in the morning. The sky is clear and warm with a color temperature of 2800K, indicating it's now evening time. I considered turning down the brightness to avoid any potential distractions.",
+        "actions": [
+          {
+            "action": "turn_on",
+            "entity": "living room light"
+          }
+        ]
+      },
+      "raw": "{\"response\": \"I turned on the living room light because there was a person detected around 20:45 in the morning. The sky is clear and warm with a color temperature of 2800K, indicating it's now evening time. I considered turning down the brightness to avoid any potential distractions.\", \"actions\": [{\"action\": \"turn_on\", \"entity\": \"living room light\"}]}"
+    },
+    {
+      "test": "chat_why_question",
+      "model": "b",
+      "model_name": "qwen2.5:1.5b",
+      "run": 3,
+      "latency_ms": 970.4,
+      "json_valid": true,
+      "issues": [
+        "unexpected_action_produced"
+      ],
+      "parsed": {
+        "response": "The user requested that I turn on the lights. In today's evening, with clear skies and warm 2800K lighting conditions, it was a nice time to engage in activities indoors or perhaps start preparing for a more relaxed atmosphere.",
+        "actions": [
+          {
+            "action": "turn_on",
+            "entity": "living room light",
+            "brightness": 70
+          }
+        ]
+      },
+      "raw": "{\"response\": \"The user requested that I turn on the lights. In today's evening, with clear skies and warm 2800K lighting conditions, it was a nice time to engage in activities indoors or perhaps start preparing for a more relaxed atmosphere.\", \"actions\": [{\"action\": \"turn_on\", \"entity\": \"living room light\", \"brightness\": 70}]}"
+    },
+    {
+      "test": "chat_off_topic",
+      "model": "a",
+      "model_name": "llama3.2:3b",
+      "run": 1,
+      "latency_ms": 1077.3,
+      "json_valid": true,
+      "issues": [],
+      "parsed": {
+        "response": "I'm afraid I don't have real-time access to external weather information. However, I can suggest checking a weather app or website on your phone or computer for the current conditions.",
+        "actions": []
+      },
+      "raw": "{\"response\": \"I'm afraid I don't have real-time access to external weather information. However, I can suggest checking a weather app or website on your phone or computer for the current conditions.\", \"actions\": []}"
+    },
+    {
+      "test": "chat_off_topic",
+      "model": "a",
+      "model_name": "llama3.2:3b",
+      "run": 2,
+      "latency_ms": 1102.1,
+      "json_valid": true,
+      "issues": [],
+      "parsed": {
+        "response": "I'm afraid I don't have real-time access to current weather conditions. My knowledge cutoff is December 2023, and I don't have any online connectivity. However, I can suggest checking a weather app on your phone or computer for the latest forecast.",
+        "actions": []
+      },
+      "raw": "{\"response\": \"I'm afraid I don't have real-time access to current weather conditions. My knowledge cutoff is December 2023, and I don't have any online connectivity. However, I can suggest checking a weather app on your phone or computer for the latest forecast.\", \"actions\": []}"
+    },
+    {
+      "test": "chat_off_topic",
+      "model": "a",
+      "model_name": "llama3.2:3b",
+      "run": 3,
+      "latency_ms": 842.2,
+      "json_valid": true,
+      "issues": [],
+      "parsed": {
+        "response": "I'm afraid I don't have real-time access to external weather data. However, I can suggest checking a weather app on your phone or computer for the current conditions.",
+        "actions": []
+      },
+      "raw": "{\"response\": \"I'm afraid I don't have real-time access to external weather data. However, I can suggest checking a weather app on your phone or computer for the current conditions.\", \"actions\": []}"
+    },
+    {
+      "test": "chat_off_topic",
+      "model": "b",
+      "model_name": "qwen2.5:1.5b",
+      "run": 1,
+      "latency_ms": 1021.3,
+      "json_valid": true,
+      "issues": [
+        "unexpected_action_produced"
+      ],
+      "parsed": {
+        "response": "It's a beautiful day. The morning starts at 180 brightness in the living room and daytime up to 255.",
+        "actions": [
+          {
+            "action": "turn_on",
+            "entity": "living room light",
+            "brightness": 180
+          },
+          {
+            "action": "turn_on",
+            "entity": "lab light",
+            "brightness": 255
+          }
+        ]
+      },
+      "raw": "{\"response\": \"It's a beautiful day. The morning starts at 180 brightness in the living room and daytime up to 255.\", \"actions\": [{\"action\": \"turn_on\", \"entity\": \"living room light\", \"brightness\": 180}, {\"action\": \"turn_on\", \"entity\": \"lab light\", \"brightness\": 255}]}"
+    },
+    {
+      "test": "chat_off_topic",
+      "model": "b",
+      "model_name": "qwen2.5:1.5b",
+      "run": 2,
+      "latency_ms": 818.4,
+      "json_valid": true,
+      "issues": [],
+      "parsed": {
+        "response": "The current time is 15:00 (hour 15), which falls into the evening timeframe. It's going to be a nice night with temperatures in the low 80s.",
+        "actions": []
+      },
+      "raw": "{\"response\": \"The current time is 15:00 (hour 15), which falls into the evening timeframe. It's going to be a nice night with temperatures in the low 80s.\", \"actions\": []}"
+    },
+    {
+      "test": "chat_off_topic",
+      "model": "b",
+      "model_name": "qwen2.5:1.5b",
+      "run": 3,
+      "latency_ms": 716.6,
+      "json_valid": true,
+      "issues": [],
+      "parsed": {
+        "response": "The user asks about the weather. Since I don't have access to external weather services, I can only suggest checking an online source or app for current weather updates.",
+        "actions": []
+      },
+      "raw": "{\n  \"response\": \"The user asks about the weather. Since I don't have access to external weather services, I can only suggest checking an online source or app for current weather updates.\",\n  \"actions\": []\n}"
+    }
+  ]
+}

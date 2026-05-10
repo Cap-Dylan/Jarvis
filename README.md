@@ -10,31 +10,31 @@ Fully local agentic smart home system. Two input paths — automated motion-trig
     ┌──────────────────────────────────────────────────────────────────────┐
     │                         Input Layer                                  │
     │                                                                      │
-    │   Tapo C121 ──► Frigate NVR ──► HA Automation ──► POST /webhook     │
+    │   Tapo C121 ──► Frigate NVR ──► HA Automation ──► POST /webhook      │
     │                                                        │             │
     │   Element (Matrix) ──────────────────────► jarvis_bot.py             │
     └──────────────────────────────────────┬──────────────┬────────────────┘
                                            │              │
     ┌──────────────────────────────────────┴──────────────┴────────────────┐
-    │                      Inference Layer (Ollama)                         │
+    │                      Inference Layer (Ollama)                        │
     │                                                                      │
     │   webhook.py ──► llama3.2:3b ──► JSON color-temp decision            │
-    │                  (deterministic, ~800ms, 100% JSON compliance)        │
+    │                  (deterministic, ~800ms, 100% JSON compliance)       │
     │                                                                      │
-    │   jarvis_bot.py ──► Qwen3.5:9b ──► tool-use loop (≤5 iterations)    │
-    │                     (conversational, ~88% tool-call accuracy)         │
+    │   jarvis_bot.py ──► Qwen3.5:9b ──► tool-use loop (≤5 iterations)     │
+    │                     (conversational, ~88% tool-call accuracy)        │
     └──────────────────────────────────────┬──────────────┬────────────────┘
                                            │              │
     ┌──────────────────────────────────────┴──────────────┴────────────────┐
     │                       Execution Layer                                │
     │                                                                      │
-    │   ha_client.py ──► Home Assistant REST API ──► Wiz RGBWW bulbs      │
+    │   ha_client.py ──► Home Assistant REST API ──► Wiz RGBWW bulbs       │
     │                                                (2 zones: living      │
     │                                                 room + lab)          │
     │                                                                      │
     │   decisions.jsonl ◄── both paths log every decision with full        │
-    │                       context: inputs, prompt, model output, action   │
-    └─────────────────────────────────────────────────────────────────────┘
+    │                       context: inputs, prompt, model output, action  │
+    └──────────────────────────────────────────────────────────────────────┘
 ```
 
 When a user asks Jarvis "why did you turn on the light?" in chat, the bot reads the same `decisions.jsonl` that the automated path writes to. The two input paths converge at the log and at the hardware they control.
